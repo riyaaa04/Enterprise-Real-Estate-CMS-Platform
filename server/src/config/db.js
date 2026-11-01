@@ -12,13 +12,20 @@ if (!fs.existsSync(LOCAL_STORE_DIR)) {
 }
 
 export let isConnectedToMongo = false;
+let cachedConnection = null;
 
 export const connectDB = async () => {
-  const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/codename_one';
+  if (cachedConnection && mongoose.connection.readyState === 1) {
+    isConnectedToMongo = true;
+    return cachedConnection;
+  }
+
+  const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/codename_one';
   try {
     const conn = await mongoose.connect(MONGO_URI, {
-      serverSelectionTimeoutMS: 2500,
+      serverSelectionTimeoutMS: 5000,
     });
+    cachedConnection = conn;
     isConnectedToMongo = true;
     console.log(`[Database] MongoDB Connected: ${conn.connection.host}`);
     return conn;

@@ -11,6 +11,10 @@
     "build": "npm run build --prefix client",
     "seed": "npm run seed --prefix server"
   },
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "devDependencies": {
     "concurrently": "^9.1.0"
   }

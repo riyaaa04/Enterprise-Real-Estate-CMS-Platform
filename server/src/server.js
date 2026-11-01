@@ -62,23 +62,40 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Boot Server
-const startServer = async () => {
-  try {
-    await connectDB();
-    await seedInitialData();
-
-    app.listen(PORT, () => {
-      console.log(`===============================================`);
-      console.log(`🚀 Codename ONE API running on port ${PORT}`);
-      console.log(`🌐 Base URL: http://localhost:${PORT}`);
-      console.log(`🛡️  Admin Portal: http://localhost:5173/admin`);
-      console.log(`===============================================`);
-    });
-  } catch (error) {
-    console.error('Failed to start server:', error);
-    process.exit(1);
+// Middleware to ensure DB connection on serverless cold starts
+app.use(async (req, res, next) => {
+  if (process.env.VERCEL) {
+    try {
+      await connectDB();
+    } catch (e) {}
   }
-};
+  next();
+});
 
-startServer();
+// Boot Server for local / continuous environments
+if (!process.env.VERCEL) {
+  const startServer = async () => {
+    try {
+      await connectDB();
+      await seedInitialData();
+
+      app.listen(PORT, () => {
+        console.log(`===============================================`);
+        console.log(`🚀 Codename ONE API running on port ${PORT}`);
+        console.log(`🌐 Base URL: http://localhost:${PORT}`);
+        console.log(`🛡️  Admin Portal: http://localhost:5173/admin`);
+        console.log(`===============================================`);
+      });
+    } catch (error) {
+      console.error('Failed to start server:', error);
+      process.exit(1);
+    }
+  };
+
+  startServer();
+} else {
+  // Cold start initialization in Vercel
+  connectDB().then(() => seedInitialData()).catch(console.error);
+}
+
+export default app;

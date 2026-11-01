@@ -17,6 +17,7 @@ import BrochureModal from './components/BrochureModal';
 
 import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
+import { apiUrl } from './utils/api';
 
 export default function App() {
   const [viewMode, setViewMode] = useState('landing'); // 'landing' | 'admin-login' | 'admin-dashboard'
@@ -34,7 +35,7 @@ export default function App() {
 
   const fetchCmsContent = async () => {
     try {
-      const res = await fetch('/api/content/all');
+      const res = await fetch(apiUrl('/api/content/all'));
       const json = await res.json();
       if (json.success && json.data) {
         setCmsData(json.data);

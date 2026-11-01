@@ -26,7 +26,7 @@
       "secondaryCtaText": "EXPLORE RESIDENCES",
       "reraNumber": "P51800049182"
     },
-    "updatedAt": "2026-11-01T08:43:46.336Z",
+    "updatedAt": "2026-11-01T11:40:07.355Z",
     "updatedBy": "System"
   },
   {
@@ -98,7 +98,7 @@
       "footerLabel": "Book Exclusive Site Tour",
       "actionText": "SCHEDULE >"
     },
-    "updatedAt": "2026-11-01T08:43:46.343Z",
+    "updatedAt": "2026-11-01T11:40:07.357Z",
     "updatedBy": "System"
   },
   {
@@ -190,7 +190,7 @@
       "brochureText": "BROCHURE",
       "enquireText": "ENQUIRE NOW"
     },
-    "updatedAt": "2026-11-01T08:43:46.343Z",
+    "updatedAt": "2026-11-01T11:40:07.358Z",
     "updatedBy": "System"
   },
   {
@@ -268,17 +268,17 @@
         }
       ]
     },
-    "updatedAt": "2026-11-01T08:43:46.344Z",
+    "updatedAt": "2026-11-01T11:40:07.359Z",
     "updatedBy": "System"
   },
   {
     "key": "residences",
     "title": "Bespoke Residences & Floor Plans",
-    "subtitle": "Luxurious 3 & 4 BHK configurations",
+    "subtitle": "1 RK, 1 BHK & 2 BHK configurations",
     "status": "published",
     "publishedData": {
       "heading": "Find the home that fits your life",
-      "subheading": "Intelligently planned spaces balancing palatial entertainment and private tranquility.",
+      "subheading": "Intelligently planned spaces balancing everyday functionality and elevated lifestyle.",
       "units": [
         {
           "id": "1rk-classic",
@@ -329,7 +329,7 @@
     },
     "draftData": {
       "heading": "Find the home that fits your life",
-      "subheading": "Intelligently planned spaces balancing palatial entertainment and private tranquility.",
+      "subheading": "Intelligently planned spaces balancing everyday functionality and elevated lifestyle.",
       "units": [
         {
           "id": "1rk-classic",
@@ -378,7 +378,7 @@
         }
       ]
     },
-    "updatedAt": "2026-11-01T08:43:46.345Z",
+    "updatedAt": "2026-11-01T11:40:07.359Z",
     "updatedBy": "System"
   },
   {
@@ -502,7 +502,7 @@
         }
       ]
     },
-    "updatedAt": "2026-11-01T08:43:46.345Z",
+    "updatedAt": "2026-11-01T11:40:07.360Z",
     "updatedBy": "System"
   },
   {
@@ -519,37 +519,100 @@
         {
           "title": "CONNECTIVITY",
           "items": [
-            { "name": "Chembur Railway Station", "time": "5 min" },
-            { "name": "Chembur Monorail Station", "time": "5 min" },
-            { "name": "Eastern Freeway", "time": "7 min" },
-            { "name": "Upcoming Metro Station", "time": "8 min" },
-            { "name": "Santacruz–Chembur Link Road", "time": "10 min" },
-            { "name": "BKC", "time": "15 min" },
-            { "name": "Airport", "time": "25 min" }
+            {
+              "name": "Chembur Railway Station",
+              "time": "5 min"
+            },
+            {
+              "name": "Chembur Monorail Station",
+              "time": "5 min"
+            },
+            {
+              "name": "Eastern Freeway",
+              "time": "7 min"
+            },
+            {
+              "name": "Upcoming Metro Station",
+              "time": "8 min"
+            },
+            {
+              "name": "Santacruz–Chembur Link Road",
+              "time": "10 min"
+            },
+            {
+              "name": "BKC",
+              "time": "15 min"
+            },
+            {
+              "name": "Airport",
+              "time": "25 min"
+            }
           ]
         },
         {
           "title": "EDUCATION",
           "items": [
-            { "name": "AFAC English High School", "time": "1 min" },
-            { "name": "St. Antony's Girls High School", "time": "1 min" },
-            { "name": "St. Gregorios High School", "time": "5 min" },
-            { "name": "Our Lady of Perpetual Succour High School", "time": "2 min" },
-            { "name": "Swami Vivekanand School & College", "time": "8 min" },
-            { "name": "Ryan International", "time": "12 min" },
-            { "name": "Shah & Anchor Campus", "time": "7 min" },
-            { "name": "RBK International", "time: "12 min" }
+            {
+              "name": "AFAC English High School",
+              "time": "1 min"
+            },
+            {
+              "name": "St. Antony's Girls High School",
+              "time": "1 min"
+            },
+            {
+              "name": "St. Gregorios High School",
+              "time": "5 min"
+            },
+            {
+              "name": "Our Lady of Perpetual Succour High School",
+              "time": "2 min"
+            },
+            {
+              "name": "Swami Vivekanand School & College",
+              "time": "8 min"
+            },
+            {
+              "name": "Ryan International",
+              "time": "12 min"
+            },
+            {
+              "name": "Shah & Anchor Campus",
+              "time": "7 min"
+            },
+            {
+              "name": "RBK International",
+              "time": "12 min"
+            }
           ]
         },
         {
           "title": "RECREATION & LIFESTYLE",
           "items": [
-            { "name": "K-Star Mall", "time": "5 min" },
-            { "name": "Westside", "time": "5 min" },
-            { "name": "Phoenix Market City", "time": "17 min" },
-            { "name": "R City Mall", "time": "15 min" },
-            { "name": "Fun Cinemas", "time": "7 min" },
-            { "name": "Movie Time", "time": "6 min" }
+            {
+              "name": "K-Star Mall",
+              "time": "5 min"
+            },
+            {
+              "name": "Westside",
+              "time": "5 min"
+            },
+            {
+              "name": "Phoenix Market City",
+              "time": "17 min"
+            },
+            {
+              "name": "R City Mall",
+              "time": "15 min"
+            },
+            {
+              "name": "Fun Cinemas",
+              "time": "7 min"
+            },
+            {
+              "name": "Movie Time",
+              "time": "6 min"
+            }
           ]
         }
       ]
@@ -563,42 +626,105 @@
         {
           "title": "CONNECTIVITY",
           "items": [
-            { "name": "Chembur Railway Station", "time": "5 min" },
-            { "name": "Chembur Monorail Station", "time": "5 min" },
-            { "name": "Eastern Freeway", "time": "7 min" },
-            { "name": "Upcoming Metro Station", "time": "8 min" },
-            { "name": "Santacruz–Chembur Link Road", "time": "10 min" },
-            { "name": "BKC", "time": "15 min" },
-            { "name": "Airport", "time": "25 min" }
+            {
+              "name": "Chembur Railway Station",
+              "time": "5 min"
+            },
+            {
+              "name": "Chembur Monorail Station",
+              "time": "5 min"
+            },
+            {
+              "name": "Eastern Freeway",
+              "time": "7 min"
+            },
+            {
+              "name": "Upcoming Metro Station",
+              "time": "8 min"
+            },
+            {
+              "name": "Santacruz–Chembur Link Road",
+              "time": "10 min"
+            },
+            {
+              "name": "BKC",
+              "time": "15 min"
+            },
+            {
+              "name": "Airport",
+              "time": "25 min"
+            }
           ]
         },
         {
           "title": "EDUCATION",
           "items": [
-            { "name": "AFAC English High School", "time": "1 min" },
-            { "name": "St. Antony's Girls High School", "time": "1 min" },
-            { "name": "St. Gregorios High School", "time": "5 min" },
-            { "name": "Our Lady of Perpetual Succour High School", "time": "2 min" },
-            { "name": "Swami Vivekanand School & College", "time": "8 min" },
-            { "name": "Ryan International", "time": "12 min" },
-            { "name": "Shah & Anchor Campus", "time": "7 min" },
-            { "name": "RBK International", "time": "12 min" }
+            {
+              "name": "AFAC English High School",
+              "time": "1 min"
+            },
+            {
+              "name": "St. Antony's Girls High School",
+              "time": "1 min"
+            },
+            {
+              "name": "St. Gregorios High School",
+              "time": "5 min"
+            },
+            {
+              "name": "Our Lady of Perpetual Succour High School",
+              "time": "2 min"
+            },
+            {
+              "name": "Swami Vivekanand School & College",
+              "time": "8 min"
+            },
+            {
+              "name": "Ryan International",
+              "time": "12 min"
+            },
+            {
+              "name": "Shah & Anchor Campus",
+              "time": "7 min"
+            },
+            {
+              "name": "RBK International",
+              "time": "12 min"
+            }
           ]
         },
         {
           "title": "RECREATION & LIFESTYLE",
           "items": [
-            { "name": "K-Star Mall", "time": "5 min" },
-            { "name": "Westside", "time": "5 min" },
-            { "name": "Phoenix Market City", "time": "17 min" },
-            { "name": "R City Mall", "time": "15 min" },
-            { "name": "Fun Cinemas", "time": "7 min" },
-            { "name": "Movie Time", "time": "6 min" }
+            {
+              "name": "K-Star Mall",
+              "time": "5 min"
+            },
+            {
+              "name": "Westside",
+              "time": "5 min"
+            },
+            {
+              "name": "Phoenix Market City",
+              "time": "17 min"
+            },
+            {
+              "name": "R City Mall",
+              "time": "15 min"
+            },
+            {
+              "name": "Fun Cinemas",
+              "time": "7 min"
+            },
+            {
+              "name": "Movie Time",
+              "time": "6 min"
+            }
           ]
         }
       ]
     },
-    "updatedAt": "2026-11-01T08:43:46.346Z",
+    "updatedAt": "2026-11-01T11:40:07.361Z",
     "updatedBy": "System"
   },
   {
@@ -618,7 +744,7 @@
       "videoUrl": "/images/building.mov",
       "posterUrl": "/images/tower-dusk.jpg"
     },
-    "updatedAt": "2026-11-01T10:15:00.000Z",
+    "updatedAt": "2026-11-01T11:40:07.361Z",
     "updatedBy": "System"
   },
   {
@@ -631,10 +757,22 @@
       "heading": "Crafting Landmarks That Transcend Time",
       "description": "With four decades of architectural distinction, our developments combine timeless design, structural engineering excellence, and impeccable delivery standards.",
       "metrics": [
-        { "value": "38+", "label": "Years of Excellence" },
-        { "value": "18M+", "label": "Sq. Ft. Delivered" },
-        { "value": "24,000+", "label": "Delighted Residents" },
-        { "value": "100%", "label": "RERA Compliance" }
+        {
+          "value": "38+",
+          "label": "Years of Excellence"
+        },
+        {
+          "value": "18M+",
+          "label": "Sq. Ft. Delivered"
+        },
+        {
+          "value": "24,000+",
+          "label": "Delighted Residents"
+        },
+        {
+          "value": "100%",
+          "label": "RERA Compliance"
+        }
       ],
       "rera": "MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in"
     },
@@ -643,14 +781,26 @@
       "heading": "Crafting Landmarks That Transcend Time",
       "description": "With four decades of architectural distinction, our developments combine timeless design, structural engineering excellence, and impeccable delivery standards.",
       "metrics": [
-        { "value": "38+", "label": "Years of Excellence" },
-        { "value": "18M+", "label": "Sq. Ft. Delivered" },
-        { "value": "24,000+", "label": "Delighted Residents" },
-        { "value": "100%", "label": "RERA Compliance" }
+        {
+          "value": "38+",
+          "label": "Years of Excellence"
+        },
+        {
+          "value": "18M+",
+          "label": "Sq. Ft. Delivered"
+        },
+        {
+          "value": "24,000+",
+          "label": "Delighted Residents"
+        },
+        {
+          "value": "100%",
+          "label": "RERA Compliance"
+        }
       ],
       "rera": "MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in"
     },
-    "updatedAt": "2026-11-01T10:25:00.000Z",
+    "updatedAt": "2026-11-01T11:40:07.362Z",
     "updatedBy": "System"
   },
   {
@@ -665,11 +815,26 @@
       "description": "Swastik Group has been shaping Mumbai's residential and commercial landscape with decades of trusted development. Each project reflects a commitment to quality construction, functional design, and community-centered living — delivered with the reliability that has made Swastik a preferred name for homebuyers across the city.",
       "image": "/images/swastik-group.jpg",
       "consultants": [
-        { "role": "ARCHITECT", "name": "Rohit Parmar, Sai Sampada DES" },
-        { "role": "RCC CONSULTANT", "name": "System Structural Consultants Pvt. Ltd." },
-        { "role": "VAASTU CONSULTANT", "name": "Kamlesh Vastu Engineer" },
-        { "role": "LEGAL CONSULTANT", "name": "Lexicon Law Partners" },
-        { "role": "MEP CONSULTANT", "name": "Rupesh Gujarathi" }
+        {
+          "role": "ARCHITECT",
+          "name": "Rohit Parmar, Sai Sampada DES"
+        },
+        {
+          "role": "RCC CONSULTANT",
+          "name": "System Structural Consultants Pvt. Ltd."
+        },
+        {
+          "role": "VAASTU CONSULTANT",
+          "name": "Kamlesh Vastu Engineer"
+        },
+        {
+          "role": "LEGAL CONSULTANT",
+          "name": "Lexicon Law Partners"
+        },
+        {
+          "role": "MEP CONSULTANT",
+          "name": "Rupesh Gujarathi"
+        }
       ]
     },
     "draftData": {
@@ -679,14 +844,29 @@
       "description": "Swastik Group has been shaping Mumbai's residential and commercial landscape with decades of trusted development. Each project reflects a commitment to quality construction, functional design, and community-centered living — delivered with the reliability that has made Swastik a preferred name for homebuyers across the city.",
       "image": "/images/swastik-group.jpg",
       "consultants": [
-        { "role": "ARCHITECT", "name": "Rohit Parmar, Sai Sampada DES" },
-        { "role": "RCC CONSULTANT", "name": "System Structural Consultants Pvt. Ltd." },
-        { "role": "VAASTU CONSULTANT", "name": "Kamlesh Vastu Engineer" },
-        { "role": "LEGAL CONSULTANT", "name": "Lexicon Law Partners" },
-        { "role": "MEP CONSULTANT", "name": "Rupesh Gujarathi" }
+        {
+          "role": "ARCHITECT",
+          "name": "Rohit Parmar, Sai Sampada DES"
+        },
+        {
+          "role": "RCC CONSULTANT",
+          "name": "System Structural Consultants Pvt. Ltd."
+        },
+        {
+          "role": "VAASTU CONSULTANT",
+          "name": "Kamlesh Vastu Engineer"
+        },
+        {
+          "role": "LEGAL CONSULTANT",
+          "name": "Lexicon Law Partners"
+        },
+        {
+          "role": "MEP CONSULTANT",
+          "name": "Rupesh Gujarathi"
+        }
       ]
     },
-    "updatedAt": "2026-11-01T10:25:00.000Z",
+    "updatedAt": "2026-11-01T11:40:07.362Z",
     "updatedBy": "System"
   },
   {
@@ -788,7 +968,7 @@
         }
       ]
     },
-    "updatedAt": "2026-11-01T08:43:46.347Z",
+    "updatedAt": "2026-11-01T11:40:07.363Z",
     "updatedBy": "System"
   }
 ]

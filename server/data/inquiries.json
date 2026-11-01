@@ -1,5 +1,44 @@
 [
   {
+    "_id": "inq_17935332073653vipg",
+    "name": "Anand Deshmukh",
+    "email": "anand.deshmukh@tcs.com",
+    "phone": "+91 99203 11842",
+    "bhkPreference": "3 & 4 BHK",
+    "budget": "₹ 5 Cr",
+    "source": "Brochure Download",
+    "message": "Downloaded the project brochure. Please send payment schedule details.",
+    "siteTourDate": null,
+    "status": "new",
+    "createdAt": "2026-11-01T11:40:07.365Z"
+  },
+  {
+    "_id": "inq_17935332073647h6we",
+    "name": "Dr. Radhika Merchant",
+    "email": "radhika.merchant@lilavati.org",
+    "phone": "+91 98199 82341",
+    "bhkPreference": "3 BHK Grande Suite",
+    "budget": "₹ 5 - 6 Cr",
+    "source": "Schedule Site Tour",
+    "message": "Interested in touring the show residence this upcoming Saturday afternoon.",
+    "siteTourDate": "2026-11-07 15:30",
+    "status": "new",
+    "createdAt": "2026-11-01T11:40:07.364Z"
+  },
+  {
+    "_id": "inq_17935332073641ygdc",
+    "name": "Vikramaditya Singhania",
+    "email": "vikram.singhania@apexcapital.in",
+    "phone": "+91 98201 44521",
+    "bhkPreference": "4 BHK Palatial Residence",
+    "budget": "₹ 7 - 10 Cr",
+    "source": "Hero CTA",
+    "message": "Looking for a high floor 4 BHK facing south-west dusk view. Requesting private site presentation.",
+    "siteTourDate": null,
+    "status": "new",
+    "createdAt": "2026-11-01T11:40:07.364Z"
+  },
+  {
     "_id": "inq_1793522626348i1181",
     "name": "Anand Deshmukh",
     "email": "anand.deshmukh@tcs.com",

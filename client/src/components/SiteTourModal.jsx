@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Calendar, Clock, CheckCircle2, Car, Sparkles } from 'lucide-react';
+import { apiUrl, saveLocalInquiry } from '../utils/api';
 
 export default function SiteTourModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -25,21 +26,26 @@ export default function SiteTourModal({ isOpen, onClose }) {
     }
 
     setLoading(true);
+    const payload = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email || 'guest@walkthrough.com',
+      source: 'Signature Card: Exclusive Site Tour',
+      siteTourDate: `${formData.date} (${formData.timeSlot})`,
+      message: `Requested exclusive site tour on ${formData.date} at ${formData.timeSlot}. Chauffeur pickup: ${formData.needChauffeur ? 'Yes' : 'No'}.`,
+    };
+
+    saveLocalInquiry(payload);
+
     try {
-      await fetch('/api/inquiries', {
+      await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email || 'guest@walkthrough.com',
-          source: 'Signature Card: Exclusive Site Tour',
-          siteTourDate: `${formData.date} (${formData.timeSlot})`,
-          message: `Requested exclusive site tour on ${formData.date} at ${formData.timeSlot}. Chauffeur pickup: ${formData.needChauffeur ? 'Yes' : 'No'}.`,
-        }),
+        body: JSON.stringify(payload),
       });
       setSubmitted(true);
     } catch (err) {
+      console.warn('Network issue saving tour booking to server, preserved locally:', err);
       setSubmitted(true);
     } finally {
       setLoading(false);

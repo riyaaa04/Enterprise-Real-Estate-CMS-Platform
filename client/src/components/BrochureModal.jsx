@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, DownloadCloud, CheckCircle2, FileText, Lock, Sparkles } from 'lucide-react';
+import { apiUrl, saveLocalInquiry } from '../utils/api';
 
 export default function BrochureModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
@@ -13,20 +14,25 @@ export default function BrochureModal({ isOpen, onClose }) {
     if (!formData.name || !formData.phone) return;
 
     setLoading(true);
+    const payload = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email || 'brochure-download@guest.com',
+      source: 'Header Nav: Brochure Download',
+      message: 'Downloaded digital project brochure dossier.',
+    };
+
+    saveLocalInquiry(payload);
+
     try {
-      await fetch('/api/inquiries', {
+      await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email || 'brochure-download@guest.com',
-          source: 'Header Nav: Brochure Download',
-          message: 'Downloaded digital project brochure dossier.',
-        }),
+        body: JSON.stringify(payload),
       });
       setDownloaded(true);
     } catch (err) {
+      console.warn('Network issue saving brochure inquiry to server, preserved locally:', err);
       setDownloaded(true);
     } finally {
       setLoading(false);

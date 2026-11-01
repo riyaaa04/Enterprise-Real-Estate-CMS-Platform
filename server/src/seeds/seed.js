@@ -258,12 +258,21 @@ export const seedInitialData = async () => {
 
       // Seed Developer Profile
       await StorageService.saveSection('developer', {
-        title: 'Developer Legacy & Heritage',
-        subtitle: 'Built on uncompromising integrity',
+        title: 'About the Developer',
+        subtitle: 'Swastik Group — A legacy of trust',
         data: {
-          badge: '38 YEARS OF ICONIC LANDMARKS',
-          heading: 'Crafting Landmarks That Transcend Time',
-          description: 'With four decades of architectural distinction, our developments combine timeless design, structural engineering excellence, and impeccable delivery standards.',
+          badge: 'ABOUT THE DEVELOPER',
+          heading: 'Swastik Group',
+          tagline: 'A legacy of trust',
+          description: "Swastik Group has been shaping Mumbai's residential and commercial landscape with decades of trusted development. Each project reflects a commitment to quality construction, functional design, and community-centered living — delivered with the reliability that has made Swastik a preferred name for homebuyers across the city.",
+          image: '/images/sunset.jpeg',
+          consultants: [
+            { role: 'ARCHITECT', name: 'Rohit Parmar, Sai Sampada DES' },
+            { role: 'RCC CONSULTANT', name: 'System Structural Consultants Pvt. Ltd.' },
+            { role: 'VAASTU CONSULTANT', name: 'Kamlesh Vastu Engineer' },
+            { role: 'LEGAL CONSULTANT', name: 'Lexicon Law Partners' },
+            { role: 'MEP CONSULTANT', name: 'Rupesh Gujarathi' }
+          ],
           metrics: [
             { value: '38+', label: 'Years of Excellence' },
             { value: '18M+', label: 'Sq. Ft. Delivered' },

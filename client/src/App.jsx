@@ -197,10 +197,12 @@ export default function App() {
         />
       </main>
 
-      {/* Luxury Footer */}
+      {/* Luxury Footer with Sunset Banner */}
       <Footer
         onAdminClick={handleAdminClick}
         onOpenEnquiry={handleOpenEnquiry}
+        onOpenBrochure={handleOpenBrochure}
+        onOpenSiteTour={handleOpenSiteTour}
       />
 
       {/* Modals */}

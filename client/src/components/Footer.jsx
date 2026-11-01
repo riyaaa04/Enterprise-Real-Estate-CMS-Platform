@@ -14,15 +14,10 @@ export default function Footer({ onAdminClick, onOpenEnquiry }) {
           
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg border border-gold-400/50 bg-[#151C28] flex items-center justify-center">
-                <span className="font-serif italic font-bold text-xl text-gold-300">I</span>
-              </div>
-              <div className="flex flex-col text-left leading-none">
-                <span className="text-[9px] tracking-[0.25em] text-gold-400 font-medium uppercase">CODENAME •</span>
-                <span className="text-base font-serif font-bold tracking-[0.18em] text-white mt-0.5">ONE</span>
-                <span className="text-[8px] tracking-[0.28em] text-neutral-400 uppercase mt-0.5">CHEMBUR • MUMBAI</span>
-              </div>
+            <div className="flex flex-col text-left leading-none">
+              <span className="text-[10px] tracking-[0.28em] text-gold-400 font-medium uppercase">CODENAME</span>
+              <span className="text-xl font-serif font-bold tracking-[0.2em] text-white mt-1">ONE</span>
+              <span className="text-[9px] tracking-[0.32em] text-neutral-400 uppercase font-light mt-1">CHEMBUR</span>
             </div>
 
             <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm pt-2">

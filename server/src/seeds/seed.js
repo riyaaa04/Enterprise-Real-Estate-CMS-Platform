@@ -59,13 +59,12 @@ export const seedInitialData = async () => {
         title: 'Navigation Header Bar',
         subtitle: 'Top floating pill bar',
         data: {
-          monogram: 'I',
-          brandSuper: 'CODENAME •',
+          brandSuper: 'CODENAME',
           brandMain: 'ONE',
-          brandSub: 'CHEMBUR • MUMBAI',
+          brandSub: 'CHEMBUR',
           navLinks: [
             { label: 'HOME', href: '#home', active: true },
-            { label: 'THE PROJECT', href: '#project' },
+            { label: 'PROJECT', href: '#project' },
             { label: 'CONNECTIVITY', href: '#connectivity' },
             { label: 'GALLERY', href: '#gallery' },
             { label: 'AMENITIES', href: '#amenities' },

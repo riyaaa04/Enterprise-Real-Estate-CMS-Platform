@@ -107,10 +107,9 @@
     "subtitle": "Top floating pill bar",
     "status": "published",
     "publishedData": {
-      "monogram": "I",
-      "brandSuper": "CODENAME •",
+      "brandSuper": "CODENAME",
       "brandMain": "ONE",
-      "brandSub": "CHEMBUR • MUMBAI",
+      "brandSub": "CHEMBUR",
       "navLinks": [
         {
           "label": "HOME",
@@ -118,7 +117,7 @@
           "active": true
         },
         {
-          "label": "THE PROJECT",
+          "label": "PROJECT",
           "href": "#project"
         },
         {
@@ -150,10 +149,9 @@
       "enquireText": "ENQUIRE NOW"
     },
     "draftData": {
-      "monogram": "I",
-      "brandSuper": "CODENAME •",
+      "brandSuper": "CODENAME",
       "brandMain": "ONE",
-      "brandSub": "CHEMBUR • MUMBAI",
+      "brandSub": "CHEMBUR",
       "navLinks": [
         {
           "label": "HOME",
@@ -161,7 +159,7 @@
           "active": true
         },
         {
-          "label": "THE PROJECT",
+          "label": "PROJECT",
           "href": "#project"
         },
         {

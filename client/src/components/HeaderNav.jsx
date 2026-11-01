@@ -15,7 +15,7 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
 
   const navLinks = navigationData?.navLinks || [
     { label: 'HOME', href: '#home', active: true },
-    { label: 'THE PROJECT', href: '#project' },
+    { label: 'PROJECT', href: '#project' },
     { label: 'CONNECTIVITY', href: '#connectivity' },
     { label: 'GALLERY', href: '#gallery' },
     { label: 'AMENITIES', href: '#amenities' },
@@ -33,27 +33,17 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
           : 'bg-[#121721]/90 backdrop-blur-md border border-neutral-700/60 shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-2.5 sm:py-3 px-4 sm:px-7'
       } flex items-center justify-between`}>
         
-        {/* Brand Logo & Monogram */}
-        <a href="#home" className="flex items-center gap-3 group">
-          {/* Gold Square Monogram Badge */}
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg border border-gold-400/50 bg-gradient-to-br from-[#1C2330] to-[#0A0D12] flex items-center justify-center shadow-inner group-hover:border-gold-400 transition-colors">
-            <span className="font-serif italic font-bold text-xl sm:text-2xl text-gold-300 select-none tracking-tighter">
-              {navigationData?.monogram || 'I'}
-            </span>
-          </div>
-
-          {/* Typography */}
-          <div className="flex flex-col text-left leading-none justify-center">
-            <span className="text-[9px] sm:text-[10px] tracking-[0.25em] text-gold-400/90 font-medium uppercase">
-              {navigationData?.brandSuper || 'CODENAME •'}
-            </span>
-            <span className="text-sm sm:text-base font-serif font-bold tracking-[0.18em] text-white group-hover:text-gold-200 transition-colors mt-0.5">
-              {navigationData?.brandMain || 'ONE'}
-            </span>
-            <span className="text-[7.5px] sm:text-[8.5px] tracking-[0.28em] text-neutral-400 uppercase font-light mt-0.5">
-              {navigationData?.brandSub || 'CHEMBUR • MUMBAI'}
-            </span>
-          </div>
+        {/* Brand: CODENAME below ONE then CHEMBUR (Logo removed) */}
+        <a href="#home" className="flex flex-col text-left leading-none justify-center group py-0.5">
+          <span className="text-[9px] sm:text-[10px] tracking-[0.26em] text-gold-400/90 font-medium uppercase">
+            {navigationData?.brandSuper?.replace(/•\s*$/, '').trim() || 'CODENAME'}
+          </span>
+          <span className="text-sm sm:text-base font-serif font-bold tracking-[0.18em] text-white group-hover:text-gold-200 transition-colors mt-0.5">
+            {navigationData?.brandMain || 'ONE'}
+          </span>
+          <span className="text-[8px] sm:text-[9px] tracking-[0.3em] text-neutral-400 uppercase font-light mt-0.5">
+            {navigationData?.brandSub?.split('•')[0]?.trim() || 'CHEMBUR'}
+          </span>
         </a>
 
         {/* Desktop Nav Links */}

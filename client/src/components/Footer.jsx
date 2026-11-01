@@ -28,15 +28,15 @@ export default function Footer({ onAdminClick, onOpenEnquiry, onOpenBrochure, on
       {/* ================= PRE-FOOTER SUNSET SKYLINE CTA BANNER ================= */}
       <div className="relative min-h-[420px] sm:min-h-[480px] flex items-center justify-center overflow-hidden">
         
-        {/* Sunset Skyline Background Image - Positioned to show the golden sunset sky */}
+        {/* Sunset Skyline Background Image - Positioned slightly lower to show sunset and skyline */}
         <img
           src="/images/sunset.jpeg"
           alt="Chembur Sunset Skyline"
-          className="absolute inset-0 w-full h-full object-cover object-top sm:object-[center_15%]"
+          className="absolute inset-0 w-full h-full object-cover object-[center_32%] sm:object-[center_30%]"
         />
 
-        {/* Clear, subtle luxury gradient overlay to keep sunset vibrant */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#14100B] via-black/25 to-black/35" />
+        {/* Balanced luxury overlay to gently tone down brightness */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#14100B] via-black/45 to-black/45" />
 
         {/* Banner Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center flex flex-col items-center">

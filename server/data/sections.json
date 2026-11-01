@@ -602,6 +602,26 @@
     "updatedBy": "System"
   },
   {
+    "key": "experience",
+    "title": "Experience One Chembur",
+    "subtitle": "Step inside and see what elevated living truly feels like.",
+    "status": "published",
+    "publishedData": {
+      "heading": "Experience One Chembur",
+      "subheading": "Step inside and see what elevated living truly feels like.",
+      "videoUrl": "/images/building.mov",
+      "posterUrl": "/images/tower-dusk.jpg"
+    },
+    "draftData": {
+      "heading": "Experience One Chembur",
+      "subheading": "Step inside and see what elevated living truly feels like.",
+      "videoUrl": "/images/building.mov",
+      "posterUrl": "/images/tower-dusk.jpg"
+    },
+    "updatedAt": "2026-11-01T10:15:00.000Z",
+    "updatedBy": "System"
+  },
+  {
     "key": "developer",
     "title": "Developer Legacy & Heritage",
     "subtitle": "Built on uncompromising integrity",

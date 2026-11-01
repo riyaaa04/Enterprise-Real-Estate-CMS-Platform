@@ -244,6 +244,18 @@ export const seedInitialData = async () => {
         }
       }, false, 'System');
 
+      // Seed Experience Video Walkthrough
+      await StorageService.saveSection('experience', {
+        title: 'Experience One Chembur',
+        subtitle: 'Step inside and see what elevated living truly feels like.',
+        data: {
+          heading: 'Experience One Chembur',
+          subheading: 'Step inside and see what elevated living truly feels like.',
+          videoUrl: '/images/building.mov',
+          posterUrl: '/images/tower-dusk.jpg'
+        }
+      }, false, 'System');
+
       // Seed Developer Profile
       await StorageService.saveSection('developer', {
         title: 'Developer Legacy & Heritage',

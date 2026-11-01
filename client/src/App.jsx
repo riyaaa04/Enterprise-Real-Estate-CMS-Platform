@@ -5,6 +5,7 @@ import ProjectSection from './components/ProjectSection';
 import ResidencesSection from './components/ResidencesSection';
 import AmenitiesSection from './components/AmenitiesSection';
 import ConnectivitySection from './components/ConnectivitySection';
+import ExperienceVideoSection from './components/ExperienceVideoSection';
 import GallerySection from './components/GallerySection';
 import DeveloperSection from './components/DeveloperSection';
 import Footer from './components/Footer';
@@ -168,6 +169,12 @@ export default function App() {
         {/* Strategic Connectivity Advantage */}
         <ConnectivitySection
           connectivityData={cmsData.connectivity}
+          onOpenEnquiry={handleOpenEnquiry}
+        />
+
+        {/* Experience One Chembur Video Walkthrough */}
+        <ExperienceVideoSection
+          experienceData={cmsData.experience}
           onOpenEnquiry={handleOpenEnquiry}
         />
 

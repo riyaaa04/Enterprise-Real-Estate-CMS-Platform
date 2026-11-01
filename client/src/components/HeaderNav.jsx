@@ -19,6 +19,7 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
     { label: 'RESIDENCES', href: '#residences' },
     { label: 'AMENITIES', href: '#amenities' },
     { label: 'CONNECTIVITY', href: '#connectivity' },
+    { label: 'EXPERIENCE', href: '#experience' },
     { label: 'GALLERY', href: '#gallery' },
     { label: 'DEVELOPER', href: '#developer' },
     { label: 'CONTACT', href: '#contact' },

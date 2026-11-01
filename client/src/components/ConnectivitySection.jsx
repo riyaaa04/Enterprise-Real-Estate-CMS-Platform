@@ -110,24 +110,24 @@ export default function ConnectivitySection({ connectivityData, onOpenEnquiry })
   }[activeTab];
 
   return (
-    <section id="connectivity" className="py-20 sm:py-28 bg-[#07090C] border-t border-neutral-800/80 relative overflow-hidden select-none">
+    <section id="connectivity" className="py-20 sm:py-28 bg-white border-y border-neutral-250 relative overflow-hidden select-none bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px]">
       
-      {/* Background ambient lighting */}
-      <div className="absolute top-10 left-10 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#4A3322]/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Subtle architectural ambient accents */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-neutral-200/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading matching reference typography */}
+        {/* Section Heading with dark typography on white container */}
         <div className="mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-gold-400 uppercase mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E5C178]/20 border border-[#C5A059]/40 text-[11px] sm:text-xs font-bold tracking-[0.22em] text-[#8C694E] uppercase mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#A67C42]" />
             <span>LOCATION & CONNECTIVITY</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-tight">
             What if your home is as well connected as your ambitions?
           </h2>
-          <p className="font-serif italic text-lg sm:text-xl text-neutral-300 mt-2 font-light">
+          <p className="font-serif italic text-lg sm:text-xl text-neutral-600 mt-2 font-normal">
             This is the one.
           </p>
         </div>

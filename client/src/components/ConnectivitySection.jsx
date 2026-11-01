@@ -110,25 +110,24 @@ export default function ConnectivitySection({ connectivityData, onOpenEnquiry })
   }[activeTab];
 
   return (
-    <section id="connectivity" className="py-20 sm:py-28 bg-gradient-to-br from-[#ECCF8E] via-[#D4AF37] to-[#B8860B] border-y border-gold-600/40 relative overflow-hidden select-none">
+    <section id="connectivity" className="py-20 sm:py-28 bg-[#07090C] border-t border-neutral-800/80 relative overflow-hidden select-none">
       
-      {/* Subtle luxury metallic light reflection overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.3)_0%,_transparent_65%)] pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-black/15 rounded-full blur-3xl pointer-events-none" />
+      {/* Background ambient lighting */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#4A3322]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading with deep bold typography on signature gold container */}
+        {/* Section Heading matching reference typography */}
         <div className="mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950/85 backdrop-blur-md border border-neutral-900/60 text-[10px] sm:text-xs font-bold tracking-[0.25em] text-[#F6EFCF] uppercase mb-3.5 shadow-lg">
+          <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-gold-400 uppercase mb-3">
             <Sparkles className="w-3.5 h-3.5 text-gold-400" />
             <span>LOCATION & CONNECTIVITY</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.3)]">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
             What if your home is as well connected as your ambitions?
           </h2>
-          <p className="font-serif italic text-lg sm:text-xl text-neutral-900 font-semibold mt-2.5">
+          <p className="font-serif italic text-lg sm:text-xl text-neutral-300 mt-2 font-light">
             This is the one.
           </p>
         </div>

@@ -118,43 +118,39 @@ export const seedInitialData = async () => {
               image: '/images/1RK.png',
               description: 'Smartly planned 1 RK residence featuring an airy studio hall, dedicated kitchen area, and attached open-air balcony.',
               features: [
-                'Spacious studio living room with ceiling fan & electrical fittings',
-                'Functional kitchen space with dedicated granite platform',
-                '45 sq.ft attached private balcony with natural light & ventilation',
-                'Well-appointed bathroom with branded sanitaryware & geyser provision',
-                'Concealed copper electrical wiring & vitrified tile flooring'
+                'Spacious studio living hall with ceiling fan & fittings',
+                'Functional kitchen area with dedicated granite platform',
+                '45 sq.ft attached private balcony with natural ventilation'
               ]
             },
             {
               id: '1bhk-grand',
               type: '1 BHK Grand',
-              carpetArea: '450 Sq. Ft.',
-              balconyArea: '60 Sq. Ft.',
-              totalArea: '510 Sq. Ft.',
+              carpetArea: '385 Sq. Ft.',
+              balconyArea: '65 Sq. Ft.',
+              totalArea: '450 Sq. Ft.',
               pricing: 'Price on Request',
-              image: '/images/1RK.png',
+              image: '/images/1BHK.jpg',
               description: 'Spacious 1-bedroom residence with dedicated master bedroom, separate dining nook, and smart kitchen platform.',
               features: [
-                'Master bedroom with wardrobe recess',
-                'Cross-ventilated living & dining zone',
-                'Branded sanitaryware & fittings',
-                'Dedicated kitchen utility space'
+                'Spacious master bedroom with dedicated wardrobe recess',
+                'Cross-ventilated living & dining zone with 65 sq.ft balcony',
+                'Granite kitchen platform with branded sanitary fittings'
               ]
             },
             {
               id: '2bhk-alto',
               type: '2 BHK Alto',
-              carpetArea: '620 Sq. Ft.',
-              balconyArea: '75 Sq. Ft.',
-              totalArea: '695 Sq. Ft.',
+              carpetArea: '585 Sq. Ft.',
+              balconyArea: '85 Sq. Ft.',
+              totalArea: '670 Sq. Ft.',
               pricing: 'Price on Request',
-              image: '/images/1RK.png',
+              image: '/images/2BHK.jpg',
               description: 'Elevated 2-bedroom residence offering dual bathrooms, master bedroom privacy, generous living hall, and scenic skyline views.',
               features: [
-                'Dual well-appointed bathrooms',
-                'Dedicated master suite with attached bath',
-                'Generous private sunset balcony',
-                'Unobstructed Chembur skyline views'
+                'Dual well-appointed bathrooms with premium branded fixtures',
+                'Dedicated master suite with attached bath & privacy',
+                '85 sq.ft expansive private balcony with scenic skyline vistas'
               ]
             }
           ]

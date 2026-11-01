@@ -193,9 +193,9 @@ export default function InquiryModal({ isOpen, onClose, defaultSource = 'Hero CT
                     onChange={(e) => setFormData({ ...formData, bhkPreference: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#151C28] border border-neutral-700 text-white text-sm focus:outline-none focus:border-gold-400 transition-colors"
                   >
-                    <option value="1 RK Classic">1 RK Classic (310 - 340 Sq.Ft)</option>
-                    <option value="1 BHK Grand">1 BHK Grand (450 - 485 Sq.Ft)</option>
-                    <option value="2 BHK Alto">2 BHK Alto (620 - 680 Sq.Ft)</option>
+                    <option value="1 RK Classic">1 RK Classic (285 Sq.Ft Carpet | 330 Sq.Ft Total)</option>
+                    <option value="1 BHK Grand">1 BHK Grand (385 Sq.Ft Carpet | 450 Sq.Ft Total)</option>
+                    <option value="2 BHK Alto">2 BHK Alto (585 Sq.Ft Carpet | 670 Sq.Ft Total)</option>
                     <option value="All Configurations">All Configurations</option>
                   </select>
                 </div>

@@ -18,6 +18,20 @@
       }
     },
     {
+      "source": "/admin(.*)",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
+      }
+    },
+    {
+      "source": "/((?!assets/|images/).*)",
+      "destination": {
+        "service": "web",
+        "path": "/index.html"
+      }
+    },
+    {
       "source": "/(.*)",
       "destination": {
         "service": "web"

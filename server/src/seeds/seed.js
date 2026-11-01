@@ -61,7 +61,7 @@ export const seedInitialData = async () => {
         data: {
           brandSuper: 'CODENAME',
           brandMain: 'ONE',
-          brandSub: 'CHEMBUR',
+          brandSub: '',
           navLinks: [
             { label: 'HOME', href: '#home', active: true },
             { label: 'PROJECT', href: '#project' },

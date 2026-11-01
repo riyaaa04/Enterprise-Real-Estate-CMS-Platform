@@ -33,16 +33,13 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
           : 'bg-[#121721]/90 backdrop-blur-md border border-neutral-700/60 shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-2.5 sm:py-3 px-4 sm:px-7'
       } flex items-center justify-between`}>
         
-        {/* Brand: CODENAME below ONE then CHEMBUR (Logo removed) */}
+        {/* Brand: CODENAME and ONE (Logo and Chembur removed) */}
         <a href="#home" className="flex flex-col text-left leading-none justify-center group py-0.5">
-          <span className="text-[9px] sm:text-[10px] tracking-[0.26em] text-gold-400/90 font-medium uppercase">
+          <span className="text-[9px] sm:text-[10px] tracking-[0.28em] text-gold-400/90 font-medium uppercase">
             {navigationData?.brandSuper?.replace(/•\s*$/, '').trim() || 'CODENAME'}
           </span>
-          <span className="text-sm sm:text-base font-serif font-bold tracking-[0.18em] text-white group-hover:text-gold-200 transition-colors mt-0.5">
+          <span className="text-sm sm:text-base font-serif font-bold tracking-[0.2em] text-white group-hover:text-gold-200 transition-colors mt-0.5">
             {navigationData?.brandMain || 'ONE'}
-          </span>
-          <span className="text-[8px] sm:text-[9px] tracking-[0.3em] text-neutral-400 uppercase font-light mt-0.5">
-            {navigationData?.brandSub?.split('•')[0]?.trim() || 'CHEMBUR'}
           </span>
         </a>
 

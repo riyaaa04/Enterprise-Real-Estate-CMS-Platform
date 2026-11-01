@@ -1,16 +1,25 @@
 import React from 'react';
-import { Compass, Sparkles, Shield, Maximize2 } from 'lucide-react';
+import { Compass, Sparkles, Shield, Maximize2, Download, Home, Store, Building2 } from 'lucide-react';
 
-export default function ProjectSection({ projectData, onOpenEnquiry }) {
+export default function ProjectSection({ projectData, onOpenEnquiry, onOpenBrochure }) {
   const badge = projectData?.badge || 'ARCHITECTURAL MASTERPIECE';
   const heading = projectData?.heading || 'An Icon Above the Chembur Skyline';
   const subheading = projectData?.subheading || 'Engineered for those whose aspirations know no horizon.';
   const paragraph1 = projectData?.paragraph1 || 'Located in Subhash Nagar, Chembur, this residential redevelopment offers a practical yet elevated living experience. Comprising 1 & 2 BHK residences in Ground-Level Commercial Spaces + 16-Story Habitational Floors, the project is planned with a strong focus on functionality and lifestyle — adding daily convenience, a modern gymnasium/fitness center, and lifestyle amenities, ensuring a well-rounded living environment for residents.';
   const paragraph2 = projectData?.paragraph2 || '';
   const features = projectData?.features || [
-    { title: 'Curated Privacy', desc: 'Only 3 bespoke residences per floor with zero overlooking corridors.' },
-    { title: 'Expansive Decks', desc: 'Generous 8-foot deep sunset terraces offering unobstructed views.' },
-    { title: 'Skyline Orientation', desc: 'Vastu-compliant layouts engineered for cross ventilation and natural lighting.' }
+    {
+      title: '1 & 2 BHK Residences',
+      desc: 'Thoughtfully planned, well-ventilated residences balancing modern comfort and family functionality.'
+    },
+    {
+      title: 'Ground-Level Commercial Spaces',
+      desc: 'Integrated retail and commercial zones bringing daily essentials and shopping convenience right downstairs.'
+    },
+    {
+      title: '16-Story Habitational Floors',
+      desc: 'Elevated residential floors complemented by a contemporary gymnasium, fitness center, and lifestyle amenities.'
+    }
   ];
 
   return (
@@ -68,7 +77,7 @@ export default function ProjectSection({ projectData, onOpenEnquiry }) {
               </p>
             )}
 
-            {/* Feature Cards */}
+            {/* Feature Cards: 3 Requested Boxes */}
             <div className="grid grid-cols-1 gap-4 pt-4">
               {features.map((feat, idx) => (
                 <div
@@ -76,23 +85,26 @@ export default function ProjectSection({ projectData, onOpenEnquiry }) {
                   className="p-4 sm:p-5 rounded-xl bg-[#121722]/80 border border-neutral-800 hover:border-gold-400/40 transition-colors flex items-start gap-4"
                 >
                   <div className="w-9 h-9 rounded-lg bg-gold-400/10 border border-gold-400/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Shield className="w-4 h-4 text-gold-400" />
+                    {idx === 0 && <Home className="w-4 h-4 text-gold-400" />}
+                    {idx === 1 && <Store className="w-4 h-4 text-gold-400" />}
+                    {idx === 2 && <Building2 className="w-4 h-4 text-gold-400" />}
                   </div>
                   <div>
                     <h3 className="text-white text-sm sm:text-base font-semibold tracking-wide">{feat.title}</h3>
-                    <p className="text-neutral-400 text-xs sm:text-sm font-light mt-1">{feat.desc}</p>
+                    {feat.desc && <p className="text-neutral-400 text-xs sm:text-sm font-light mt-1">{feat.desc}</p>}
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Inquire CTA */}
+            {/* Download Brochure CTA Button */}
             <div className="pt-2">
               <button
-                onClick={() => onOpenEnquiry('The Project Section')}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold tracking-widest uppercase bg-gold-400 text-black hover:bg-gold-300 transition-colors shadow-gold-glow cursor-pointer"
+                onClick={onOpenBrochure || (() => onOpenEnquiry('Download Brochure'))}
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-xs font-bold tracking-widest uppercase bg-gradient-to-r from-[#F6EFCF] via-[#D4AF37] to-[#B8860B] text-neutral-950 hover:shadow-gold-glow hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
               >
-                <span>REQUEST COMPLETE ARCHITECTURAL BRIEF</span>
+                <Download className="w-4 h-4" />
+                <span>DOWNLOAD BROCHURE</span>
               </button>
             </div>
 

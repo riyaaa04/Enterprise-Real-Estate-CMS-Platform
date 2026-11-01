@@ -150,6 +150,7 @@ export default function App() {
         <ProjectSection
           projectData={cmsData.project}
           onOpenEnquiry={handleOpenEnquiry}
+          onOpenBrochure={handleOpenBrochure}
         />
 
         {/* Bespoke 3 & 4 BHK Residences */}

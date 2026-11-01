@@ -88,9 +88,9 @@ export const seedInitialData = async () => {
           paragraph1: 'Located in Subhash Nagar, Chembur, this residential redevelopment offers a practical yet elevated living experience. Comprising 1 & 2 BHK residences in Ground-Level Commercial Spaces + 16-Story Habitational Floors, the project is planned with a strong focus on functionality and lifestyle — adding daily convenience, a modern gymnasium/fitness center, and lifestyle amenities, ensuring a well-rounded living environment for residents.',
           paragraph2: '',
           features: [
-            { title: 'Curated Privacy', desc: 'Only 3 bespoke residences per floor with zero overlooking corridors.' },
-            { title: 'Expansive Decks', desc: 'Generous 8-foot deep sunset terraces offering unobstructed views.' },
-            { title: 'Skyline Orientation', desc: 'Vastu-compliant layouts engineered for cross ventilation and natural lighting.' }
+            { title: '1 & 2 BHK Residences', desc: 'Thoughtfully planned, well-ventilated residences balancing modern comfort and family functionality.' },
+            { title: 'Ground-Level Commercial Spaces', desc: 'Integrated retail and commercial zones bringing daily essentials and shopping convenience right downstairs.' },
+            { title: '16-Story Habitational Floors', desc: 'Elevated residential floors complemented by a contemporary gymnasium, fitness center, and lifestyle amenities.' }
           ]
         }
       }, false, 'System');

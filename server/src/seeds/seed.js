@@ -265,7 +265,7 @@ export const seedInitialData = async () => {
           heading: 'Swastik Group',
           tagline: 'A legacy of trust',
           description: "Swastik Group has been shaping Mumbai's residential and commercial landscape with decades of trusted development. Each project reflects a commitment to quality construction, functional design, and community-centered living — delivered with the reliability that has made Swastik a preferred name for homebuyers across the city.",
-          image: '/images/sunset.jpeg',
+          image: '/images/swastik-group.jpg',
           consultants: [
             { role: 'ARCHITECT', name: 'Rohit Parmar, Sai Sampada DES' },
             { role: 'RCC CONSULTANT', name: 'System Structural Consultants Pvt. Ltd.' },

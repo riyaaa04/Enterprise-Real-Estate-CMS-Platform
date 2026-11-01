@@ -6,7 +6,7 @@ export default function DeveloperSection({ developerData, onOpenEnquiry }) {
   const heading = developerData?.heading || 'Swastik Group';
   const tagline = developerData?.tagline || 'A legacy of trust';
   const description = developerData?.description || "Swastik Group has been shaping Mumbai's residential and commercial landscape with decades of trusted development. Each project reflects a commitment to quality construction, functional design, and community-centered living — delivered with the reliability that has made Swastik a preferred name for homebuyers across the city.";
-  const image = developerData?.image || '/images/sunset.jpeg';
+  const image = developerData?.image || '/images/swastik-group.jpg';
 
   const consultants = developerData?.consultants || [
     {

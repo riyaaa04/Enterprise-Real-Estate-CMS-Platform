@@ -1,5 +1,23 @@
 [
   {
+    "_id": "act_1793533277163762o",
+    "action": "Admin Login",
+    "section": "Auth",
+    "details": "User admin@codenameone.com logged in successfully",
+    "user": "Executive Portfolio Director",
+    "ip": "::1",
+    "timestamp": "2026-11-01T11:41:17.162Z"
+  },
+  {
+    "_id": "act_17935332687310pvn",
+    "action": "Inquiry Received",
+    "section": "Inquiries",
+    "details": "New inquiry from Riya Jitendra Singh (+918108907297)",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T11:41:08.730Z"
+  },
+  {
     "_id": "act_179353320736510hk",
     "action": "Inquiry Received",
     "section": "Inquiries",

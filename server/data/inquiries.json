@@ -1,5 +1,18 @@
 [
   {
+    "_id": "inq_1793533268730eagrw",
+    "name": "Riya Jitendra Singh",
+    "email": "2023.riyas@isu.ac.in",
+    "phone": "+918108907297",
+    "bhkPreference": "2 BHK Alto",
+    "budget": "₹ 8 Cr+",
+    "source": "Hero Primary CTA",
+    "message": "",
+    "siteTourDate": null,
+    "status": "new",
+    "createdAt": "2026-11-01T11:41:08.730Z"
+  },
+  {
     "_id": "inq_17935332073653vipg",
     "name": "Anand Deshmukh",
     "email": "anand.deshmukh@tcs.com",

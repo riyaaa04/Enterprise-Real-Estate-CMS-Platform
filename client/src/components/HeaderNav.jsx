@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Download, Menu, X, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Download, Menu, X } from 'lucide-react';
 
 export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochure, onAdminClick }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,18 +71,8 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
           </button>
         </nav>
 
-        {/* Right CTA Button & Admin Pill */}
+        {/* Right CTA Button & Mobile Toggle */}
         <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
-          {/* Quick CMS Admin Entry (Small discrete gold key) */}
-          <button
-            onClick={onAdminClick}
-            title="Open Admin CMS"
-            className="hidden sm:flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full text-[10px] font-medium tracking-wider uppercase bg-obsidian-800/80 border border-neutral-700/80 text-neutral-300 hover:text-gold-300 hover:border-gold-400/50 transition-all flex-shrink-0 cursor-pointer"
-          >
-            <ShieldCheck className="w-3.5 h-3.5 text-gold-400" />
-            <span>CMS</span>
-          </button>
-
           {/* Enquire Now Golden Pill */}
           <button
             onClick={() => onOpenEnquiry('Header Nav')}
@@ -128,16 +118,6 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
           >
             <Download className="w-4 h-4 text-gold-400" />
             <span>DOWNLOAD BROCHURE</span>
-          </button>
-          <button
-            onClick={() => {
-              setMobileMenuOpen(false);
-              onAdminClick();
-            }}
-            className="flex items-center justify-center gap-2 text-xs text-neutral-400 hover:text-gold-300 py-1 tracking-widest uppercase"
-          >
-            <ShieldCheck className="w-4 h-4 text-gold-400" />
-            <span>ADMIN CMS PORTAL</span>
           </button>
         </div>
       )}

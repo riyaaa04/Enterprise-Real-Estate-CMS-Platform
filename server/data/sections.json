@@ -217,6 +217,20 @@
           "title": "16-Story Habitational Floors",
           "desc": "Elevated residential floors complemented by a contemporary gymnasium, fitness center, and lifestyle amenities."
         }
+      ],
+      "stats": [
+        {
+          "value": "3.25",
+          "label": "MILLION SQ FT ONGOING"
+        },
+        {
+          "value": "3.55",
+          "label": "MILLION SQ FT COMPLETED"
+        },
+        {
+          "value": "2600+",
+          "label": "HAPPY FAMILIES"
+        }
       ]
     },
     "draftData": {
@@ -237,6 +251,20 @@
         {
           "title": "16-Story Habitational Floors",
           "desc": "Elevated residential floors complemented by a contemporary gymnasium, fitness center, and lifestyle amenities."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3.25",
+          "label": "MILLION SQ FT ONGOING"
+        },
+        {
+          "value": "3.55",
+          "label": "MILLION SQ FT COMPLETED"
+        },
+        {
+          "value": "2600+",
+          "label": "HAPPY FAMILIES"
         }
       ]
     },

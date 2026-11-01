@@ -91,6 +91,11 @@ export const seedInitialData = async () => {
             { title: '1 & 2 BHK Residences', desc: 'Thoughtfully planned, well-ventilated residences balancing modern comfort and family functionality.' },
             { title: 'Ground-Level Commercial Spaces', desc: 'Integrated retail and commercial zones bringing daily essentials and shopping convenience right downstairs.' },
             { title: '16-Story Habitational Floors', desc: 'Elevated residential floors complemented by a contemporary gymnasium, fitness center, and lifestyle amenities.' }
+          ],
+          stats: [
+            { value: '3.25', label: 'MILLION SQ FT ONGOING' },
+            { value: '3.55', label: 'MILLION SQ FT COMPLETED' },
+            { value: '2600+', label: 'HAPPY FAMILIES' }
           ]
         }
       }, false, 'System');

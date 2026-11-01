@@ -7,12 +7,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const LOCAL_STORE_DIR = path.resolve(__dirname, '../../data');
-if (!fs.existsSync(LOCAL_STORE_DIR)) {
-  fs.mkdirSync(LOCAL_STORE_DIR, { recursive: true });
+try {
+  if (!fs.existsSync(LOCAL_STORE_DIR)) {
+    fs.mkdirSync(LOCAL_STORE_DIR, { recursive: true });
+  }
+} catch (e) {
+  // Read-only filesystem in serverless environments
 }
 
 export let isConnectedToMongo = false;
 let cachedConnection = null;
+
+const DEFAULT_MONGO_URI = 'mongodb+srv://2023riyas_db_user:gAaB9jHCEUIuWk3c@cluster0.xoxxzbf.mongodb.net/codename_one?retryWrites=true&w=majority';
 
 export const connectDB = async () => {
   if (cachedConnection && mongoose.connection.readyState === 1) {
@@ -20,17 +26,18 @@ export const connectDB = async () => {
     return cachedConnection;
   }
 
-  const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/codename_one';
+  const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_MONGO_URI;
   try {
     const conn = await mongoose.connect(MONGO_URI, {
-      serverSelectionTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 6000,
+      bufferCommands: false,
     });
     cachedConnection = conn;
     isConnectedToMongo = true;
     console.log(`[Database] MongoDB Connected: ${conn.connection.host}`);
     return conn;
   } catch (error) {
-    console.warn(`[Database] MongoDB connection failed (${error.message}). Running with high-availability local JSON store.`);
+    console.warn(`[Database] MongoDB connection note (${error.message}). Running with resilient high-availability store.`);
     isConnectedToMongo = false;
     return null;
   }

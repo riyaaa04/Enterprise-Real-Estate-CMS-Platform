@@ -30,6 +30,16 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(morgan('dev'));
 
+// Ensure DB connection on serverless cold starts before any route runs
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+  } catch (e) {
+    console.warn('DB connect error in request middleware:', e.message);
+  }
+  next();
+});
+
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/content', contentRoutes);
@@ -60,16 +70,6 @@ app.use((err, req, res, next) => {
     message: err.message || 'Internal Server Error',
     ...(process.env.NODE_ENV === 'development' ? { stack: err.stack } : {})
   });
-});
-
-// Middleware to ensure DB connection on serverless cold starts
-app.use(async (req, res, next) => {
-  if (process.env.VERCEL) {
-    try {
-      await connectDB();
-    } catch (e) {}
-  }
-  next();
 });
 
 // Boot Server for local / continuous environments

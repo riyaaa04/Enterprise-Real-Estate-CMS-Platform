@@ -1,5 +1,14 @@
 [
   {
+    "_id": "act_1793545241296sgtl",
+    "action": "Admin Login",
+    "section": "Auth",
+    "details": "Master Admin logged in successfully",
+    "user": "Executive Portfolio Director",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T15:00:41.296Z"
+  },
+  {
     "_id": "act_1793533277163762o",
     "action": "Admin Login",
     "section": "Auth",

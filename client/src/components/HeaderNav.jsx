@@ -28,14 +28,14 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 pt-3 sm:pt-4 transition-all duration-300">
       {/* Top Floating Glass Pill */}
-      <div className={`w-full max-w-[1340px] rounded-full transition-all duration-300 ${
+      <div className={`w-full max-w-[1460px] rounded-full transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0E131A]/95 backdrop-blur-xl border border-gold-400/30 shadow-[0_10px_35px_rgba(0,0,0,0.8)] py-2 sm:py-2.5 px-4 sm:px-6'
-          : 'bg-[#121721]/90 backdrop-blur-md border border-neutral-700/60 shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-2.5 sm:py-3 px-4 sm:px-7'
-      } flex items-center justify-between`}>
+          ? 'bg-[#0E131A]/95 backdrop-blur-xl border border-gold-400/30 shadow-[0_10px_35px_rgba(0,0,0,0.8)] py-2 sm:py-2 pl-4 sm:pl-6 pr-2 sm:pr-2.5'
+          : 'bg-[#121721]/90 backdrop-blur-md border border-neutral-700/60 shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-2 sm:py-2.5 pl-4 sm:pl-6 pr-2 sm:pr-3'
+      } flex items-center justify-between gap-2 sm:gap-4`}>
         
         {/* Brand: CODENAME and ONE (Logo and Chembur removed) */}
-        <a href="#home" className="flex flex-col text-left leading-none justify-center group py-0.5">
+        <a href="#home" className="flex flex-col text-left leading-none justify-center group py-0.5 flex-shrink-0">
           <span className="text-[9px] sm:text-[10px] tracking-[0.28em] text-gold-400/90 font-medium uppercase">
             {navigationData?.brandSuper?.replace(/•\s*$/, '').trim() || 'CODENAME'}
           </span>
@@ -45,12 +45,12 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[11px] xl:text-xs tracking-[0.16em] font-medium">
+        <nav className="hidden lg:flex items-center gap-2.5 lg:gap-3 xl:gap-4 2xl:gap-5 text-[10px] lg:text-[11px] xl:text-xs tracking-[0.12em] xl:tracking-[0.15em] font-medium flex-shrink">
           {navLinks.map((item, idx) => (
             <a
               key={idx}
               href={item.href}
-              className={`transition-colors py-1 flex items-center gap-1.5 ${
+              className={`transition-colors py-1 flex items-center gap-1 whitespace-nowrap ${
                 item.active
                   ? 'text-gold-400 font-semibold'
                   : 'text-neutral-300 hover:text-white'
@@ -64,7 +64,7 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
           {/* Brochure Link with Icon */}
           <button
             onClick={onOpenBrochure}
-            className="flex items-center gap-1.5 text-neutral-300 hover:text-gold-300 transition-colors py-1 pl-1 cursor-pointer"
+            className="flex items-center gap-1.5 text-neutral-300 hover:text-gold-300 transition-colors py-1 pl-1 whitespace-nowrap cursor-pointer"
           >
             <Download className="w-3.5 h-3.5 text-gold-400" />
             <span>{navigationData?.brochureText || 'BROCHURE'}</span>
@@ -72,12 +72,12 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
         </nav>
 
         {/* Right CTA Button & Admin Pill */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
           {/* Quick CMS Admin Entry (Small discrete gold key) */}
           <button
             onClick={onAdminClick}
             title="Open Admin CMS"
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-medium tracking-wider uppercase bg-obsidian-800/80 border border-neutral-700/80 text-neutral-300 hover:text-gold-300 hover:border-gold-400/50 transition-all cursor-pointer"
+            className="hidden sm:flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full text-[10px] font-medium tracking-wider uppercase bg-obsidian-800/80 border border-neutral-700/80 text-neutral-300 hover:text-gold-300 hover:border-gold-400/50 transition-all flex-shrink-0 cursor-pointer"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-gold-400" />
             <span>CMS</span>
@@ -86,10 +86,10 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
           {/* Enquire Now Golden Pill */}
           <button
             onClick={() => onOpenEnquiry('Header Nav')}
-            className="group relative inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-neutral-950 bg-gradient-to-r from-[#F6EFCF] via-[#D4AF37] to-[#B8860B] hover:shadow-gold-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer"
+            className="group relative inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-neutral-950 bg-gradient-to-r from-[#F6EFCF] via-[#D4AF37] to-[#B8860B] hover:shadow-gold-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 whitespace-nowrap flex-shrink-0 cursor-pointer"
           >
             <span>{navigationData?.enquireText || 'ENQUIRE NOW'}</span>
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
           </button>
 
           {/* Mobile Menu Toggle Button */}

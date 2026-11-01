@@ -623,6 +623,38 @@
   },
   {
     "key": "developer",
+    "title": "Developer Legacy & Heritage",
+    "subtitle": "Built on uncompromising integrity",
+    "status": "published",
+    "publishedData": {
+      "badge": "38 YEARS OF ICONIC LANDMARKS",
+      "heading": "Crafting Landmarks That Transcend Time",
+      "description": "With four decades of architectural distinction, our developments combine timeless design, structural engineering excellence, and impeccable delivery standards.",
+      "metrics": [
+        { "value": "38+", "label": "Years of Excellence" },
+        { "value": "18M+", "label": "Sq. Ft. Delivered" },
+        { "value": "24,000+", "label": "Delighted Residents" },
+        { "value": "100%", "label": "RERA Compliance" }
+      ],
+      "rera": "MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in"
+    },
+    "draftData": {
+      "badge": "38 YEARS OF ICONIC LANDMARKS",
+      "heading": "Crafting Landmarks That Transcend Time",
+      "description": "With four decades of architectural distinction, our developments combine timeless design, structural engineering excellence, and impeccable delivery standards.",
+      "metrics": [
+        { "value": "38+", "label": "Years of Excellence" },
+        { "value": "18M+", "label": "Sq. Ft. Delivered" },
+        { "value": "24,000+", "label": "Delighted Residents" },
+        { "value": "100%", "label": "RERA Compliance" }
+      ],
+      "rera": "MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in"
+    },
+    "updatedAt": "2026-11-01T10:25:00.000Z",
+    "updatedBy": "System"
+  },
+  {
+    "key": "swastik",
     "title": "About the Developer",
     "subtitle": "Swastik Group — A legacy of trust",
     "status": "published",
@@ -638,14 +670,7 @@
         { "role": "VAASTU CONSULTANT", "name": "Kamlesh Vastu Engineer" },
         { "role": "LEGAL CONSULTANT", "name": "Lexicon Law Partners" },
         { "role": "MEP CONSULTANT", "name": "Rupesh Gujarathi" }
-      ],
-      "metrics": [
-        { "value": "38+", "label": "Years of Excellence" },
-        { "value": "18M+", "label": "Sq. Ft. Delivered" },
-        { "value": "24,000+", "label": "Delighted Residents" },
-        { "value": "100%", "label": "RERA Compliance" }
-      ],
-      "rera": "MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in"
+      ]
     },
     "draftData": {
       "badge": "ABOUT THE DEVELOPER",
@@ -659,16 +684,9 @@
         { "role": "VAASTU CONSULTANT", "name": "Kamlesh Vastu Engineer" },
         { "role": "LEGAL CONSULTANT", "name": "Lexicon Law Partners" },
         { "role": "MEP CONSULTANT", "name": "Rupesh Gujarathi" }
-      ],
-      "metrics": [
-        { "value": "38+", "label": "Years of Excellence" },
-        { "value": "18M+", "label": "Sq. Ft. Delivered" },
-        { "value": "24,000+", "label": "Delighted Residents" },
-        { "value": "100%", "label": "RERA Compliance" }
-      ],
-      "rera": "MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in"
+      ]
     },
-    "updatedAt": "2026-11-01T10:20:00.000Z",
+    "updatedAt": "2026-11-01T10:25:00.000Z",
     "updatedBy": "System"
   },
   {

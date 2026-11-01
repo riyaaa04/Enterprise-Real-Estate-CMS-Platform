@@ -8,6 +8,7 @@ import ConnectivitySection from './components/ConnectivitySection';
 import ExperienceVideoSection from './components/ExperienceVideoSection';
 import GallerySection from './components/GallerySection';
 import DeveloperSection from './components/DeveloperSection';
+import SwastikGroupSection from './components/SwastikGroupSection';
 import Footer from './components/Footer';
 
 import InquiryModal from './components/InquiryModal';
@@ -186,6 +187,12 @@ export default function App() {
         {/* Developer Legacy & MahaRERA Registration */}
         <DeveloperSection
           developerData={cmsData.developer}
+          onOpenEnquiry={handleOpenEnquiry}
+        />
+
+        {/* Swastik Group & Key Project Consultants */}
+        <SwastikGroupSection
+          swastikData={cmsData.swastik}
           onOpenEnquiry={handleOpenEnquiry}
         />
       </main>

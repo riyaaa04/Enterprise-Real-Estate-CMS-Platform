@@ -256,8 +256,26 @@ export const seedInitialData = async () => {
         }
       }, false, 'System');
 
-      // Seed Developer Profile
+      // Seed Developer Profile (Crafting Landmarks That Transcend Time)
       await StorageService.saveSection('developer', {
+        title: 'Developer Legacy & Heritage',
+        subtitle: 'Built on uncompromising integrity',
+        data: {
+          badge: '38 YEARS OF ICONIC LANDMARKS',
+          heading: 'Crafting Landmarks That Transcend Time',
+          description: 'With four decades of architectural distinction, our developments combine timeless design, structural engineering excellence, and impeccable delivery standards.',
+          metrics: [
+            { value: '38+', label: 'Years of Excellence' },
+            { value: '18M+', label: 'Sq. Ft. Delivered' },
+            { value: '24,000+', label: 'Delighted Residents' },
+            { value: '100%', label: 'RERA Compliance' }
+          ],
+          rera: 'MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in'
+        }
+      }, false, 'System');
+
+      // Seed Swastik Group Profile
+      await StorageService.saveSection('swastik', {
         title: 'About the Developer',
         subtitle: 'Swastik Group — A legacy of trust',
         data: {
@@ -272,14 +290,7 @@ export const seedInitialData = async () => {
             { role: 'VAASTU CONSULTANT', name: 'Kamlesh Vastu Engineer' },
             { role: 'LEGAL CONSULTANT', name: 'Lexicon Law Partners' },
             { role: 'MEP CONSULTANT', name: 'Rupesh Gujarathi' }
-          ],
-          metrics: [
-            { value: '38+', label: 'Years of Excellence' },
-            { value: '18M+', label: 'Sq. Ft. Delivered' },
-            { value: '24,000+', label: 'Delighted Residents' },
-            { value: '100%', label: 'RERA Compliance' }
-          ],
-          rera: 'MahaRERA Registration No: P51800049182 | Project available at maharera.mahaonline.gov.in'
+          ]
         }
       }, false, 'System');
 

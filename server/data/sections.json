@@ -277,91 +277,91 @@
     "subtitle": "Luxurious 3 & 4 BHK configurations",
     "status": "published",
     "publishedData": {
-      "heading": "Bespoke Configurations",
+      "heading": "Find the home that fits your life",
       "subheading": "Intelligently planned spaces balancing palatial entertainment and private tranquility.",
       "units": [
         {
-          "id": "3bhk-grande",
-          "type": "3 BHK Grande Suite",
-          "carpetArea": "1,325 Sq. Ft.",
-          "balconyArea": "185 Sq. Ft.",
-          "pricing": "₹ 4.85 Cr* Onwards",
-          "description": "Expansive 3-bedroom suite with Italian marble living room, dedicated powder room, and private deck.",
+          "id": "1rk-classic",
+          "type": "1 RK Classic",
+          "carpetArea": "310 - 340 Sq. Ft.",
+          "balconyArea": "Dedicated Utility",
+          "pricing": "Price on Request",
+          "description": "Efficiently designed compact studio home maximizing usable living space, natural ventilation, and everyday functionality.",
           "features": [
-            "Master suite with walk-in wardrobe",
-            "Separate utility area",
-            "East-facing sunrise views"
+            "Optimized studio layout with open kitchen",
+            "Vastu-aligned main entrance",
+            "Premium vitrified tile flooring"
           ]
         },
         {
-          "id": "4bhk-palatial",
-          "type": "4 BHK Palatial Residence",
-          "carpetArea": "1,960 Sq. Ft.",
-          "balconyArea": "260 Sq. Ft.",
-          "pricing": "₹ 7.25 Cr* Onwards",
-          "description": "Double master suites, formal drawing room, state-of-the-art island kitchen layout, and dual balconies.",
+          "id": "1bhk-grand",
+          "type": "1 BHK Grand",
+          "carpetArea": "450 - 485 Sq. Ft.",
+          "balconyArea": "Sunlit French Windows",
+          "pricing": "Price on Request",
+          "description": "Spacious 1-bedroom residence with dedicated master bedroom, separate dining nook, and smart kitchen platform.",
           "features": [
-            "Private elevator lobby access",
-            "Servant quarter with private entry",
-            "Unobstructed 360° dusk vistas"
+            "Master bedroom with wardrobe recess",
+            "Cross-ventilated living & dining zone",
+            "Branded sanitaryware & fittings"
           ]
         },
         {
-          "id": "4bhk-sky-villa",
-          "type": "4 BHK Sky Duplex Villa",
-          "carpetArea": "2,850 Sq. Ft.",
-          "balconyArea": "420 Sq. Ft.",
-          "pricing": "Price on Application",
-          "description": "Crown level penthouse with private double-height glass rotunda, private heated plunge pool, and sky terrace.",
+          "id": "2bhk-alto",
+          "type": "2 BHK Alto",
+          "carpetArea": "620 - 680 Sq. Ft.",
+          "balconyArea": "Private Sunset Balcony",
+          "pricing": "Price on Request",
+          "description": "Elevated 2-bedroom residence offering dual bathrooms, master bedroom privacy, generous living hall, and scenic skyline views.",
           "features": [
-            "Private plunge pool & jacuzzi",
-            "Double-height ceiling in salon",
-            "Ultra-exclusive 39th & 40th levels"
+            "Dual well-appointed bathrooms",
+            "Dedicated master suite with attached bath",
+            "Unobstructed Chembur skyline views"
           ]
         }
       ]
     },
     "draftData": {
-      "heading": "Bespoke Configurations",
+      "heading": "Find the home that fits your life",
       "subheading": "Intelligently planned spaces balancing palatial entertainment and private tranquility.",
       "units": [
         {
-          "id": "3bhk-grande",
-          "type": "3 BHK Grande Suite",
-          "carpetArea": "1,325 Sq. Ft.",
-          "balconyArea": "185 Sq. Ft.",
-          "pricing": "₹ 4.85 Cr* Onwards",
-          "description": "Expansive 3-bedroom suite with Italian marble living room, dedicated powder room, and private deck.",
+          "id": "1rk-classic",
+          "type": "1 RK Classic",
+          "carpetArea": "310 - 340 Sq. Ft.",
+          "balconyArea": "Dedicated Utility",
+          "pricing": "Price on Request",
+          "description": "Efficiently designed compact studio home maximizing usable living space, natural ventilation, and everyday functionality.",
           "features": [
-            "Master suite with walk-in wardrobe",
-            "Separate utility area",
-            "East-facing sunrise views"
+            "Optimized studio layout with open kitchen",
+            "Vastu-aligned main entrance",
+            "Premium vitrified tile flooring"
           ]
         },
         {
-          "id": "4bhk-palatial",
-          "type": "4 BHK Palatial Residence",
-          "carpetArea": "1,960 Sq. Ft.",
-          "balconyArea": "260 Sq. Ft.",
-          "pricing": "₹ 7.25 Cr* Onwards",
-          "description": "Double master suites, formal drawing room, state-of-the-art island kitchen layout, and dual balconies.",
+          "id": "1bhk-grand",
+          "type": "1 BHK Grand",
+          "carpetArea": "450 - 485 Sq. Ft.",
+          "balconyArea": "Sunlit French Windows",
+          "pricing": "Price on Request",
+          "description": "Spacious 1-bedroom residence with dedicated master bedroom, separate dining nook, and smart kitchen platform.",
           "features": [
-            "Private elevator lobby access",
-            "Servant quarter with private entry",
-            "Unobstructed 360° dusk vistas"
+            "Master bedroom with wardrobe recess",
+            "Cross-ventilated living & dining zone",
+            "Branded sanitaryware & fittings"
           ]
         },
         {
-          "id": "4bhk-sky-villa",
-          "type": "4 BHK Sky Duplex Villa",
-          "carpetArea": "2,850 Sq. Ft.",
-          "balconyArea": "420 Sq. Ft.",
-          "pricing": "Price on Application",
-          "description": "Crown level penthouse with private double-height glass rotunda, private heated plunge pool, and sky terrace.",
+          "id": "2bhk-alto",
+          "type": "2 BHK Alto",
+          "carpetArea": "620 - 680 Sq. Ft.",
+          "balconyArea": "Private Sunset Balcony",
+          "pricing": "Price on Request",
+          "description": "Elevated 2-bedroom residence offering dual bathrooms, master bedroom privacy, generous living hall, and scenic skyline views.",
           "features": [
-            "Private plunge pool & jacuzzi",
-            "Double-height ceiling in salon",
-            "Ultra-exclusive 39th & 40th levels"
+            "Dual well-appointed bathrooms",
+            "Dedicated master suite with attached bath",
+            "Unobstructed Chembur skyline views"
           ]
         }
       ]

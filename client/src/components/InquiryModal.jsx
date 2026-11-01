@@ -193,10 +193,10 @@ export default function InquiryModal({ isOpen, onClose, defaultSource = 'Hero CT
                     onChange={(e) => setFormData({ ...formData, bhkPreference: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#151C28] border border-neutral-700 text-white text-sm focus:outline-none focus:border-gold-400 transition-colors"
                   >
-                    <option value="3 BHK Grande Suite">3 BHK Grande Suite (1,325 Sq.Ft)</option>
-                    <option value="4 BHK Palatial Residence">4 BHK Palatial Residence (1,960 Sq.Ft)</option>
-                    <option value="4 BHK Sky Duplex Villa">4 BHK Sky Duplex Villa (2,850 Sq.Ft)</option>
-                    <option value="Both 3 & 4 BHK">Both 3 & 4 BHK Options</option>
+                    <option value="1 RK Classic">1 RK Classic (310 - 340 Sq.Ft)</option>
+                    <option value="1 BHK Grand">1 BHK Grand (450 - 485 Sq.Ft)</option>
+                    <option value="2 BHK Alto">2 BHK Alto (620 - 680 Sq.Ft)</option>
+                    <option value="All Configurations">All Configurations</option>
                   </select>
                 </div>
 

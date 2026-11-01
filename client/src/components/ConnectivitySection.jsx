@@ -110,24 +110,25 @@ export default function ConnectivitySection({ connectivityData, onOpenEnquiry })
   }[activeTab];
 
   return (
-    <section id="connectivity" className="py-20 sm:py-28 bg-white border-y border-neutral-250 relative overflow-hidden select-none bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px]">
+    <section id="connectivity" className="py-20 sm:py-28 bg-gradient-to-br from-[#ECCF8E] via-[#D4AF37] to-[#B8860B] border-y border-gold-600/40 relative overflow-hidden select-none">
       
-      {/* Subtle architectural ambient accents */}
-      <div className="absolute top-10 left-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-neutral-200/40 rounded-full blur-3xl pointer-events-none" />
+      {/* Subtle luxury metallic light reflection overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.3)_0%,_transparent_65%)] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-black/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading with dark typography on white container */}
+        {/* Section Heading with deep bold typography on signature gold container */}
         <div className="mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E5C178]/20 border border-[#C5A059]/40 text-[11px] sm:text-xs font-bold tracking-[0.22em] text-[#8C694E] uppercase mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#A67C42]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950/85 backdrop-blur-md border border-neutral-900/60 text-[10px] sm:text-xs font-bold tracking-[0.25em] text-[#F6EFCF] uppercase mb-3.5 shadow-lg">
+            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
             <span>LOCATION & CONNECTIVITY</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.3)]">
             What if your home is as well connected as your ambitions?
           </h2>
-          <p className="font-serif italic text-lg sm:text-xl text-neutral-600 mt-2 font-normal">
+          <p className="font-serif italic text-lg sm:text-xl text-neutral-900 font-semibold mt-2.5">
             This is the one.
           </p>
         </div>

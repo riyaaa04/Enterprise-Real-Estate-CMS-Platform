@@ -3,7 +3,7 @@ import { Compass, Sparkles, Shield, Maximize2, Download, Home, Store, Building2 
 
 export default function ProjectSection({ projectData, onOpenEnquiry, onOpenBrochure }) {
   const badge = projectData?.badge || 'ARCHITECTURAL MASTERPIECE';
-  const heading = projectData?.heading || 'An Icon Above the Chembur Skyline';
+  const heading = projectData?.heading || 'A legacy built for the future';
   const subheading = projectData?.subheading || 'Engineered for those whose aspirations know no horizon.';
   const paragraph1 = projectData?.paragraph1 || 'Located in Subhash Nagar, Chembur, this residential redevelopment offers a practical yet elevated living experience. Comprising 1 & 2 BHK residences in Ground-Level Commercial Spaces + 16-Story Habitational Floors, the project is planned with a strong focus on functionality and lifestyle — adding daily convenience, a modern gymnasium/fitness center, and lifestyle amenities, ensuring a well-rounded living environment for residents.';
   const paragraph2 = projectData?.paragraph2 || '';

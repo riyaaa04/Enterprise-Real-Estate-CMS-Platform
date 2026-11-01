@@ -26,44 +26,43 @@ export default function Footer({ onAdminClick, onOpenEnquiry, onOpenBrochure, on
     <footer id="contact" className="relative text-neutral-300 font-sans select-none overflow-hidden">
       
       {/* ================= PRE-FOOTER SUNSET SKYLINE CTA BANNER ================= */}
-      <div className="relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-[420px] sm:min-h-[480px] flex items-center justify-center overflow-hidden">
         
-        {/* Sunset Skyline Background Image */}
+        {/* Sunset Skyline Background Image - Positioned to show the golden sunset sky */}
         <img
           src="/images/sunset.jpeg"
           alt="Chembur Sunset Skyline"
-          className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-top sm:object-[center_15%]"
         />
 
-        {/* Luxury Dark Obsidian & Warm Amber Vignette Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0C09] via-black/65 to-black/75" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.3)_0%,_rgba(7,9,12,0.85)_100%)]" />
+        {/* Clear, subtle luxury gradient overlay to keep sunset vibrant */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#14100B] via-black/25 to-black/35" />
 
         {/* Banner Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center flex flex-col items-center">
           
           {/* Eyebrow */}
-          <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-[#ECCF8E] uppercase mb-4 block drop-shadow-md">
+          <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-[#F6EFCF] uppercase mb-4 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             READY TO CALL IT HOME?
           </span>
 
           {/* Heading */}
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-8 drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-8 drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
             Your Next Chapter Begins in Chembur
           </h2>
 
-          {/* Dual Action Buttons matching reference image */}
+          {/* Dual Action Buttons with Luxury Gold Theme */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <button
               onClick={handleSiteVisit}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3.5 rounded-lg bg-white hover:bg-[#F6EFCF] text-neutral-950 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-2xl hover:scale-105 hover:shadow-gold-glow cursor-pointer"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl bg-gradient-to-r from-[#F6EFCF] via-[#D4AF37] to-[#B8860B] text-neutral-950 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.4)] hover:shadow-gold-glow-lg hover:scale-105 cursor-pointer"
             >
               SCHEDULE A SITE VISIT
             </button>
 
             <button
               onClick={handleBrochure}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3.5 rounded-lg bg-neutral-900/60 hover:bg-neutral-900/90 text-white border border-neutral-400/80 hover:border-gold-400 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-2xl backdrop-blur-md hover:scale-105 cursor-pointer"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl bg-black/45 hover:bg-black/75 text-[#F6EFCF] hover:text-white border border-gold-400/80 hover:border-gold-300 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-2xl backdrop-blur-md hover:scale-105 cursor-pointer"
             >
               DOWNLOAD BROCHURE
             </button>

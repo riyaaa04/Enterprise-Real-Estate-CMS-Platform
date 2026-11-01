@@ -199,16 +199,47 @@ export const seedInitialData = async () => {
         title: 'Strategic Connectivity & Location Advantage',
         subtitle: 'Subhash Nagar, Chembur, Mumbai',
         data: {
-          badge: 'PRIME CENTRAL CONNECTIVITY',
-          heading: 'Minutes from Everywhere That Matters',
-          subheading: 'Chembur offers effortless transit to South Mumbai, BKC, Navi Mumbai, and the International Airport.',
-          hubs: [
-            { name: 'BKC Business District', time: '12 Mins', route: 'Via BKC-Chembur Elevated Connector' },
-            { name: 'Eastern Freeway', time: '03 Mins', route: 'Direct signal-free connectivity to Fort & Colaba' },
-            { name: 'Chhatrapati Shivaji Intl Airport', time: '22 Mins', route: 'Via Santa Cruz-Chembur Link Road (SCLR)' },
-            { name: 'Chembur Monorail & Metro Line 2B', time: '04 Mins', route: 'Walking transit hub connecting East to West' },
-            { name: 'Bombay Presidency Golf Club', time: '06 Mins', route: 'Historic 18-hole championship golf course' },
-            { name: 'Top Tier Hospitals & Schools', time: '05 Mins', route: 'Surana Sethia Hospital, The Green Acres Academy' }
+          badge: 'LOCATION & CONNECTIVITY',
+          heading: 'What if your home is as well connected as your ambitions?',
+          tagline: 'This is the one.',
+          mapImage: '/images/map-only.png',
+          categories: [
+            {
+              title: 'CONNECTIVITY',
+              items: [
+                { name: 'Chembur Railway Station', time: '5 min' },
+                { name: 'Chembur Monorail Station', time: '5 min' },
+                { name: 'Eastern Freeway', time: '7 min' },
+                { name: 'Upcoming Metro Station', time: '8 min' },
+                { name: 'Santacruz–Chembur Link Road', time: '10 min' },
+                { name: 'BKC', time: '15 min' },
+                { name: 'Airport', time: '25 min' }
+              ]
+            },
+            {
+              title: 'EDUCATION',
+              items: [
+                { name: 'AFAC English High School', time: '1 min' },
+                { name: "St. Antony's Girls High School", time: '1 min' },
+                { name: 'St. Gregorios High School', time: '5 min' },
+                { name: 'Our Lady of Perpetual Succour High School', time: '2 min' },
+                { name: 'Swami Vivekanand School & College', time: '8 min' },
+                { name: 'Ryan International', time: '12 min' },
+                { name: 'Shah & Anchor Campus', time: '7 min' },
+                { name: 'RBK International', time: '12 min' }
+              ]
+            },
+            {
+              title: 'RECREATION & LIFESTYLE',
+              items: [
+                { name: 'K-Star Mall', time: '5 min' },
+                { name: 'Westside', time: '5 min' },
+                { name: 'Phoenix Market City', time: '17 min' },
+                { name: 'R City Mall', time: '15 min' },
+                { name: 'Fun Cinemas', time: '7 min' },
+                { name: 'Movie Time', time: '6 min' }
+              ]
+            }
           ]
         }
       }, false, 'System');

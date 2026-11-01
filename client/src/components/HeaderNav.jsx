@@ -16,10 +16,10 @@ export default function HeaderNav({ navigationData, onOpenEnquiry, onOpenBrochur
   const navLinks = navigationData?.navLinks || [
     { label: 'HOME', href: '#home', active: true },
     { label: 'PROJECT', href: '#project' },
+    { label: 'RESIDENCES', href: '#residences' },
+    { label: 'AMENITIES', href: '#amenities' },
     { label: 'CONNECTIVITY', href: '#connectivity' },
     { label: 'GALLERY', href: '#gallery' },
-    { label: 'AMENITIES', href: '#amenities' },
-    { label: 'RESIDENCES', href: '#residences' },
     { label: 'DEVELOPER', href: '#developer' },
     { label: 'CONTACT', href: '#contact' },
   ];

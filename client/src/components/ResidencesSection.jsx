@@ -6,29 +6,51 @@ export default function ResidencesSection({ residencesData, onOpenEnquiry }) {
     {
       id: '1rk-classic',
       type: '1 RK Classic',
-      carpetArea: '310 - 340 Sq. Ft.',
-      balconyArea: 'Dedicated Utility',
+      carpetArea: '285 Sq. Ft.',
+      balconyArea: '45 Sq. Ft.',
+      totalArea: '330 Sq. Ft.',
       pricing: 'Price on Request',
-      description: 'Efficiently designed compact studio home maximizing usable living space, natural ventilation, and everyday functionality.',
-      features: ['Optimized studio layout with open kitchen', 'Vastu-aligned main entrance', 'Premium vitrified tile flooring']
+      image: '/images/1RK.png',
+      description: 'Smartly planned 1 RK residence featuring an airy studio hall, dedicated kitchen area, and attached open-air balcony.',
+      features: [
+        'Spacious studio living room with ceiling fan & electrical fittings',
+        'Functional kitchen space with dedicated granite platform',
+        '45 sq.ft attached private balcony with natural light & ventilation',
+        'Well-appointed bathroom with branded sanitaryware & geyser provision',
+        'Concealed copper electrical wiring & vitrified tile flooring'
+      ]
     },
     {
       id: '1bhk-grand',
       type: '1 BHK Grand',
-      carpetArea: '450 - 485 Sq. Ft.',
-      balconyArea: 'Sunlit French Windows',
+      carpetArea: '450 Sq. Ft.',
+      balconyArea: '60 Sq. Ft.',
+      totalArea: '510 Sq. Ft.',
       pricing: 'Price on Request',
+      image: '/images/1RK.png',
       description: 'Spacious 1-bedroom residence with dedicated master bedroom, separate dining nook, and smart kitchen platform.',
-      features: ['Master bedroom with wardrobe recess', 'Cross-ventilated living & dining zone', 'Branded sanitaryware & fittings']
+      features: [
+        'Master bedroom with wardrobe recess',
+        'Cross-ventilated living & dining zone',
+        'Branded sanitaryware & fittings',
+        'Dedicated kitchen utility space'
+      ]
     },
     {
       id: '2bhk-alto',
       type: '2 BHK Alto',
-      carpetArea: '620 - 680 Sq. Ft.',
-      balconyArea: 'Private Sunset Balcony',
+      carpetArea: '620 Sq. Ft.',
+      balconyArea: '75 Sq. Ft.',
+      totalArea: '695 Sq. Ft.',
       pricing: 'Price on Request',
+      image: '/images/1RK.png',
       description: 'Elevated 2-bedroom residence offering dual bathrooms, master bedroom privacy, generous living hall, and scenic skyline views.',
-      features: ['Dual well-appointed bathrooms', 'Dedicated master suite with attached bath', 'Unobstructed Chembur skyline views']
+      features: [
+        'Dual well-appointed bathrooms',
+        'Dedicated master suite with attached bath',
+        'Generous private sunset balcony',
+        'Unobstructed Chembur skyline views'
+      ]
     }
   ];
 
@@ -61,7 +83,7 @@ export default function ResidencesSection({ residencesData, onOpenEnquiry }) {
               onClick={() => setActiveTab(idx)}
               className={`px-5 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-200 cursor-pointer ${
                 activeTab === idx
-                  ? 'bg-gold-gradient text-neutral-950 shadow-gold-glow scale-105'
+                  ? 'bg-gold-gradient text-neutral-950 shadow-gold-glow scale-105 font-bold'
                   : 'bg-[#121722] text-neutral-300 hover:text-white border border-neutral-800 hover:border-gold-400/40'
               }`}
             >
@@ -86,23 +108,23 @@ export default function ResidencesSection({ residencesData, onOpenEnquiry }) {
                 </p>
               </div>
 
-              {/* Spec Pills */}
+              {/* Spec Pills: Carpet Area, Balcony, Total Area */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 <div className="p-3.5 rounded-xl bg-[#151D28] border border-neutral-800">
                   <span className="text-[10px] tracking-wider text-neutral-400 uppercase block">Carpet Area</span>
                   <span className="font-serif text-lg font-bold text-white mt-0.5 block">{selectedUnit.carpetArea}</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#151D28] border border-neutral-800">
-                  <span className="text-[10px] tracking-wider text-neutral-400 uppercase block">Balcony Deck</span>
+                  <span className="text-[10px] tracking-wider text-neutral-400 uppercase block">Balcony</span>
                   <span className="font-serif text-lg font-bold text-white mt-0.5 block">{selectedUnit.balconyArea}</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#151D28] border border-neutral-800 col-span-2 sm:col-span-1">
-                  <span className="text-[10px] tracking-wider text-neutral-400 uppercase block">Price Guide</span>
-                  <span className="font-serif text-lg font-bold text-gold-300 mt-0.5 block">{selectedUnit.pricing}</span>
+                  <span className="text-[10px] tracking-wider text-neutral-400 uppercase block">Total Area</span>
+                  <span className="font-serif text-lg font-bold text-gold-300 mt-0.5 block">{selectedUnit.totalArea || selectedUnit.pricing}</span>
                 </div>
               </div>
 
-              {/* Key Features List */}
+              {/* Key Features / Inclusions List */}
               <div className="space-y-2.5 pt-2">
                 <span className="text-xs font-semibold tracking-wider text-neutral-300 uppercase">Suite Inclusions:</span>
                 {selectedUnit.features?.map((f, i) => (
@@ -125,45 +147,52 @@ export default function ResidencesSection({ residencesData, onOpenEnquiry }) {
               </div>
             </div>
 
-            {/* Right Column: Architectural Plan Preview & Visual */}
+            {/* Right Column: Actual Residence Image / Architectural Plan */}
             <div className="lg:col-span-6 relative flex justify-center">
-              <div className="w-full h-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#121824] to-[#0A0D12] border border-gold-400/30 p-6 flex flex-col items-center justify-center relative overflow-hidden group">
-                
-                {/* Architectural Blueprint Grid Pattern */}
-                <div
-                  className="absolute inset-0 opacity-15"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
-                  }}
-                />
+              {selectedUnit.image ? (
+                <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-gold-400/40 relative group shadow-2xl bg-[#0A0D12]">
+                  <img
+                    src={selectedUnit.image}
+                    alt={`${selectedUnit.type} Interior View`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07090C]/85 via-transparent to-transparent opacity-80" />
 
-                {/* SVG Blueprint Illustration */}
-                <div className="relative z-10 text-center flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-2xl bg-gold-400/10 border border-gold-400/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Layers className="w-8 h-8 text-gold-400" />
-                  </div>
-                  <span className="font-serif text-xl sm:text-2xl text-white font-medium">
-                    {selectedUnit.type}
-                  </span>
-                  <span className="text-xs tracking-widest text-neutral-400 uppercase mt-1">
-                    Architectural Layout Plan
-                  </span>
-                  <div className="mt-4 px-4 py-2 rounded-full bg-obsidian-900/90 border border-neutral-700 text-xs text-gold-300 flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-gold-400" />
-                    <span>Vastu Compliant Layout</span>
+                  {/* Floating Unit Badge */}
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                    <div className="px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-gold-400/40 text-xs text-gold-300 font-semibold tracking-wider uppercase">
+                      {selectedUnit.type} — Actual Residence View
+                    </div>
+                    <button
+                      onClick={() => onOpenEnquiry(`Schedule Site Visit: ${selectedUnit.type}`)}
+                      className="px-3.5 py-1.5 rounded-full bg-gold-400 text-black text-xs font-bold uppercase tracking-wider hover:bg-gold-300 transition-colors cursor-pointer"
+                    >
+                      Book Tour
+                    </button>
                   </div>
                 </div>
-
-                {/* Interactive Blueprint Tag */}
-                <button
-                  onClick={() => onOpenEnquiry(`Preview Layout: ${selectedUnit.type}`)}
-                  className="absolute bottom-4 right-4 text-[11px] font-semibold text-gold-400 hover:text-white uppercase tracking-wider flex items-center gap-1 cursor-pointer"
-                >
-                  <span>Enquire For Dimensions</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
+              ) : (
+                <div className="w-full h-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#121824] to-[#0A0D12] border border-gold-400/30 p-6 flex flex-col items-center justify-center relative overflow-hidden group">
+                  <div
+                    className="absolute inset-0 opacity-15"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)',
+                      backgroundSize: '24px 24px',
+                    }}
+                  />
+                  <div className="relative z-10 text-center flex flex-col items-center">
+                    <div className="w-16 h-16 rounded-2xl bg-gold-400/10 border border-gold-400/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <Layers className="w-8 h-8 text-gold-400" />
+                    </div>
+                    <span className="font-serif text-xl sm:text-2xl text-white font-medium">
+                      {selectedUnit.type}
+                    </span>
+                    <span className="text-xs tracking-widest text-neutral-400 uppercase mt-1">
+                      Architectural Layout Plan
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
 
           </div>

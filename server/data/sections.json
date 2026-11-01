@@ -283,39 +283,49 @@
         {
           "id": "1rk-classic",
           "type": "1 RK Classic",
-          "carpetArea": "310 - 340 Sq. Ft.",
-          "balconyArea": "Dedicated Utility",
+          "carpetArea": "285 Sq. Ft.",
+          "balconyArea": "45 Sq. Ft.",
+          "totalArea": "330 Sq. Ft.",
           "pricing": "Price on Request",
-          "description": "Efficiently designed compact studio home maximizing usable living space, natural ventilation, and everyday functionality.",
+          "image": "/images/1RK.png",
+          "description": "Smartly planned 1 RK residence featuring an airy studio hall, dedicated kitchen area, and attached open-air balcony.",
           "features": [
-            "Optimized studio layout with open kitchen",
-            "Vastu-aligned main entrance",
-            "Premium vitrified tile flooring"
+            "Spacious studio living room with ceiling fan & electrical fittings",
+            "Functional kitchen space with dedicated granite platform",
+            "45 sq.ft attached private balcony with natural light & ventilation",
+            "Well-appointed bathroom with branded sanitaryware & geyser provision",
+            "Concealed copper electrical wiring & vitrified tile flooring"
           ]
         },
         {
           "id": "1bhk-grand",
           "type": "1 BHK Grand",
-          "carpetArea": "450 - 485 Sq. Ft.",
-          "balconyArea": "Sunlit French Windows",
+          "carpetArea": "450 Sq. Ft.",
+          "balconyArea": "60 Sq. Ft.",
+          "totalArea": "510 Sq. Ft.",
           "pricing": "Price on Request",
+          "image": "/images/1RK.png",
           "description": "Spacious 1-bedroom residence with dedicated master bedroom, separate dining nook, and smart kitchen platform.",
           "features": [
             "Master bedroom with wardrobe recess",
             "Cross-ventilated living & dining zone",
-            "Branded sanitaryware & fittings"
+            "Branded sanitaryware & fittings",
+            "Dedicated kitchen utility space"
           ]
         },
         {
           "id": "2bhk-alto",
           "type": "2 BHK Alto",
-          "carpetArea": "620 - 680 Sq. Ft.",
-          "balconyArea": "Private Sunset Balcony",
+          "carpetArea": "620 Sq. Ft.",
+          "balconyArea": "75 Sq. Ft.",
+          "totalArea": "695 Sq. Ft.",
           "pricing": "Price on Request",
+          "image": "/images/1RK.png",
           "description": "Elevated 2-bedroom residence offering dual bathrooms, master bedroom privacy, generous living hall, and scenic skyline views.",
           "features": [
             "Dual well-appointed bathrooms",
             "Dedicated master suite with attached bath",
+            "Generous private sunset balcony",
             "Unobstructed Chembur skyline views"
           ]
         }
@@ -328,39 +338,49 @@
         {
           "id": "1rk-classic",
           "type": "1 RK Classic",
-          "carpetArea": "310 - 340 Sq. Ft.",
-          "balconyArea": "Dedicated Utility",
+          "carpetArea": "285 Sq. Ft.",
+          "balconyArea": "45 Sq. Ft.",
+          "totalArea": "330 Sq. Ft.",
           "pricing": "Price on Request",
-          "description": "Efficiently designed compact studio home maximizing usable living space, natural ventilation, and everyday functionality.",
+          "image": "/images/1RK.png",
+          "description": "Smartly planned 1 RK residence featuring an airy studio hall, dedicated kitchen area, and attached open-air balcony.",
           "features": [
-            "Optimized studio layout with open kitchen",
-            "Vastu-aligned main entrance",
-            "Premium vitrified tile flooring"
+            "Spacious studio living room with ceiling fan & electrical fittings",
+            "Functional kitchen space with dedicated granite platform",
+            "45 sq.ft attached private balcony with natural light & ventilation",
+            "Well-appointed bathroom with branded sanitaryware & geyser provision",
+            "Concealed copper electrical wiring & vitrified tile flooring"
           ]
         },
         {
           "id": "1bhk-grand",
           "type": "1 BHK Grand",
-          "carpetArea": "450 - 485 Sq. Ft.",
-          "balconyArea": "Sunlit French Windows",
+          "carpetArea": "450 Sq. Ft.",
+          "balconyArea": "60 Sq. Ft.",
+          "totalArea": "510 Sq. Ft.",
           "pricing": "Price on Request",
+          "image": "/images/1RK.png",
           "description": "Spacious 1-bedroom residence with dedicated master bedroom, separate dining nook, and smart kitchen platform.",
           "features": [
             "Master bedroom with wardrobe recess",
             "Cross-ventilated living & dining zone",
-            "Branded sanitaryware & fittings"
+            "Branded sanitaryware & fittings",
+            "Dedicated kitchen utility space"
           ]
         },
         {
           "id": "2bhk-alto",
           "type": "2 BHK Alto",
-          "carpetArea": "620 - 680 Sq. Ft.",
-          "balconyArea": "Private Sunset Balcony",
+          "carpetArea": "620 Sq. Ft.",
+          "balconyArea": "75 Sq. Ft.",
+          "totalArea": "695 Sq. Ft.",
           "pricing": "Price on Request",
+          "image": "/images/1RK.png",
           "description": "Elevated 2-bedroom residence offering dual bathrooms, master bedroom privacy, generous living hall, and scenic skyline views.",
           "features": [
             "Dual well-appointed bathrooms",
             "Dedicated master suite with attached bath",
+            "Generous private sunset balcony",
             "Unobstructed Chembur skyline views"
           ]
         }

@@ -5,8 +5,8 @@ export default function ProjectSection({ projectData, onOpenEnquiry }) {
   const badge = projectData?.badge || 'ARCHITECTURAL MASTERPIECE';
   const heading = projectData?.heading || 'An Icon Above the Chembur Skyline';
   const subheading = projectData?.subheading || 'Engineered for those whose aspirations know no horizon.';
-  const paragraph1 = projectData?.paragraph1 || 'Rising 40 storeys above the vibrant arterial pulse of Chembur, Codename ONE redefines Mumbai’s high-altitude luxury. With sculptural bronze-tinted glass façades, sweeping continuous balconies, and private elevator vestibules, this address brings uncompromised sanctuary to the city’s heart.';
-  const paragraph2 = projectData?.paragraph2 || 'Every detail is tailored to perfection: triple-height arrival lobby adorned with travertine stone, acoustic double glazing, high-speed gearless elevators, and biometric dual-key access.';
+  const paragraph1 = projectData?.paragraph1 || 'Located in Subhash Nagar, Chembur, this residential redevelopment offers a practical yet elevated living experience. Comprising 1 & 2 BHK residences in Ground-Level Commercial Spaces + 16-Story Habitational Floors, the project is planned with a strong focus on functionality and lifestyle — adding daily convenience, a modern gymnasium/fitness center, and lifestyle amenities, ensuring a well-rounded living environment for residents.';
+  const paragraph2 = projectData?.paragraph2 || '';
   const features = projectData?.features || [
     { title: 'Curated Privacy', desc: 'Only 3 bespoke residences per floor with zero overlooking corridors.' },
     { title: 'Expansive Decks', desc: 'Generous 8-foot deep sunset terraces offering unobstructed views.' },
@@ -48,7 +48,7 @@ export default function ProjectSection({ projectData, onOpenEnquiry }) {
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-obsidian-900/90 backdrop-blur-md border border-gold-400/30 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] tracking-widest text-gold-400 uppercase font-semibold">Structure Status</span>
-                  <p className="text-white font-medium text-sm">40 Storey Pre-Cast Monolithic Core</p>
+                  <p className="text-white font-medium text-sm">Ground + 16-Story Habitational Floors</p>
                 </div>
                 <div className="w-8 h-8 rounded-full bg-gold-400/20 border border-gold-400/40 flex items-center justify-center">
                   <Maximize2 className="w-4 h-4 text-gold-400" />
@@ -62,9 +62,11 @@ export default function ProjectSection({ projectData, onOpenEnquiry }) {
             <p className="text-neutral-300 text-sm sm:text-base font-light leading-relaxed">
               {paragraph1}
             </p>
-            <p className="text-neutral-400 text-sm sm:text-base font-light leading-relaxed">
-              {paragraph2}
-            </p>
+            {paragraph2 && (
+              <p className="text-neutral-400 text-sm sm:text-base font-light leading-relaxed">
+                {paragraph2}
+              </p>
+            )}
 
             {/* Feature Cards */}
             <div className="grid grid-cols-1 gap-4 pt-4">

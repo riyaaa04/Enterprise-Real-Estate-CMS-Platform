@@ -51,9 +51,6 @@ export default function ProjectSection({ projectData, onOpenEnquiry, onOpenBroch
           
           {/* Left Visual Column with 3 Overlapping Stat Boxes over Building Photo */}
           <div className="lg:col-span-6 relative pr-0 sm:pr-2 lg:pr-4">
-            {/* Architectural Outline Frame */}
-            <div className="hidden sm:block absolute top-5 right-0 bottom-2 left-20 border border-gold-400/30 rounded-2xl pointer-events-none -z-0" />
-
             <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-center">
               
               {/* 3 Overlapping Stat Boxes on the left */}

@@ -1,0 +1,17 @@
+{
+  "name": "codename-one-platform",
+  "version": "1.0.0",
+  "description": "Production-Grade Luxury Real Estate Platform with Dynamic CMS & Inquiry Management",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "node dev-runner.js",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

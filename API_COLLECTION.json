@@ -1,0 +1,351 @@
+{
+  "info": {
+    "_postman_id": "c0dename-1-real-estate-api-collection",
+    "name": "Codename ONE Real Estate Platform API",
+    "description": "Production-grade RESTful API collection for Codename ONE Luxury Real Estate CMS & Inquiry Platform.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5001/api",
+      "type": "string"
+    },
+    {
+      "key": "authToken",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "System Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        },
+        "description": "Check API status, service uptime, and health diagnostics."
+      }
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@codenameone.com\",\n  \"password\": \"AdminPassword123!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            },
+            "description": "Authenticates administrative user and returns a signed 7-day JWT bearer token."
+          }
+        },
+        {
+          "name": "Current Admin Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/auth/me",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "me"]
+            },
+            "description": "Retrieves authenticated administrator details."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dynamic CMS Content",
+      "item": [
+        {
+          "name": "Get All Sections (Public Published)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/content/all",
+              "host": ["{{baseUrl}}"],
+              "path": ["content", "all"]
+            },
+            "description": "Returns all live published CMS sections for public website consumption."
+          }
+        },
+        {
+          "name": "Get All Sections Including Drafts (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/content/all?drafts=true",
+              "host": ["{{baseUrl}}"],
+              "path": ["content", "all"],
+              "query": [
+                {
+                  "key": "drafts",
+                  "value": "true"
+                }
+              ]
+            },
+            "description": "Returns all CMS sections including uncommitted drafts."
+          }
+        },
+        {
+          "name": "Get Hero Section",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/content/hero",
+              "host": ["{{baseUrl}}"],
+              "path": ["content", "hero"]
+            },
+            "description": "Retrieves the Hero section configuration."
+          }
+        },
+        {
+          "name": "Update Hero Section (Save as Draft)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"tagBadge\": \"• SUBHASH NAGAR • CHEMBUR • MUMBAI | RERA REGISTERED\",\n    \"subtitle\": \"CODENAME\",\n    \"mainTitle\": \"One\",\n    \"locationTrack\": \"CHEMBUR\",\n    \"tagline\": \"Where home extends to life.\",\n    \"description\": \"Ultra-luxury bespoke 3 & 4 BHK landmark residences designed for effortless grandeur and timeless tranquility.\",\n    \"primaryCtaText\": \"ENQUIRE NOW\",\n    \"secondaryCtaText\": \"EXPLORE RESIDENCES\"\n  },\n  \"saveAsDraft\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/content/hero",
+              "host": ["{{baseUrl}}"],
+              "path": ["content", "hero"]
+            },
+            "description": "Stages draft updates without immediately publishing to the public visitors."
+          }
+        },
+        {
+          "name": "Publish Draft Section Live",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/content/hero/publish",
+              "host": ["{{baseUrl}}"],
+              "path": ["content", "hero", "publish"]
+            },
+            "description": "Pushes staged draft changes live to production."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Inquiries Management",
+      "item": [
+        {
+          "name": "Submit Public Inquiry",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Aarav Singhania\",\n  \"email\": \"aarav@singhaniaholdings.com\",\n  \"phone\": \"+91 98200 12345\",\n  \"bhkPreference\": \"4 BHK Palatial Residence\",\n  \"budget\": \"₹ 7 - 10 Cr\",\n  \"source\": \"Hero Primary CTA\",\n  \"message\": \"Interested in high-altitude suite with sea and dusk views.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/inquiries",
+              "host": ["{{baseUrl}}"],
+              "path": ["inquiries"]
+            },
+            "description": "Receives and validates buyer inquiries."
+          }
+        },
+        {
+          "name": "List Inquiries (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/inquiries?search=&status=all&page=1&limit=50",
+              "host": ["{{baseUrl}}"],
+              "path": ["inquiries"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": ""
+                },
+                {
+                  "key": "status",
+                  "value": "all"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            },
+            "description": "Lists inquiries with filtering, search and pagination."
+          }
+        },
+        {
+          "name": "Update Inquiry Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"scheduled\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/inquiries/:inquiryId/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["inquiries", ":inquiryId", "status"]
+            },
+            "description": "Updates inquiry lifecycle status: new, contacted, scheduled, closed."
+          }
+        },
+        {
+          "name": "Export Inquiries to CSV",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/inquiries/export",
+              "host": ["{{baseUrl}}"],
+              "path": ["inquiries", "export"]
+            },
+            "description": "Generates a downloadable CSV spreadsheet of all registered buyer leads."
+          }
+        }
+      ]
+    },
+    {
+      "name": "SEO & Activity Logs",
+      "item": [
+        {
+          "name": "Get SEO Metadata",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/seo",
+              "host": ["{{baseUrl}}"],
+              "path": ["seo"]
+            }
+          }
+        },
+        {
+          "name": "Update SEO Metadata",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Codename ONE Chembur | Ultra-Luxury 3 & 4 BHK Landmark Residences Mumbai\",\n  \"description\": \"Discover Codename ONE at Subhash Nagar, Chembur, Mumbai. 40+ Storeys iconic tower with 25K sq.ft Sky Clubhouse.\",\n  \"keywords\": \"Codename One, Chembur, Luxury Apartments Mumbai, 3 BHK, 4 BHK\",\n  \"ogImage\": \"/images/tower-dusk.jpg\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/seo",
+              "host": ["{{baseUrl}}"],
+              "path": ["seo"]
+            }
+          }
+        },
+        {
+          "name": "Get Activity Logs",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/activity-logs?limit=50",
+              "host": ["{{baseUrl}}"],
+              "path": ["activity-logs"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

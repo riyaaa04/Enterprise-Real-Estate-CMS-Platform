@@ -1,0 +1,110 @@
+[
+  {
+    "_id": "act_17935226263487ywi",
+    "action": "Inquiry Received",
+    "section": "Inquiries",
+    "details": "New inquiry from Anand Deshmukh (+91 99203 11842)",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.348Z"
+  },
+  {
+    "_id": "act_179352262634888za",
+    "action": "Inquiry Received",
+    "section": "Inquiries",
+    "details": "New inquiry from Dr. Radhika Merchant (+91 98199 82341)",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.348Z"
+  },
+  {
+    "_id": "act_1793522626348wbth",
+    "action": "Inquiry Received",
+    "section": "Inquiries",
+    "details": "New inquiry from Vikramaditya Singhania (+91 98201 44521)",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.348Z"
+  },
+  {
+    "_id": "act_1793522626347x125",
+    "action": "Section Published",
+    "section": "gallery",
+    "details": "Updated section gallery",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.347Z"
+  },
+  {
+    "_id": "act_1793522626347hi73",
+    "action": "Section Published",
+    "section": "developer",
+    "details": "Updated section developer",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.347Z"
+  },
+  {
+    "_id": "act_1793522626346jou6",
+    "action": "Section Published",
+    "section": "connectivity",
+    "details": "Updated section connectivity",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.346Z"
+  },
+  {
+    "_id": "act_1793522626346aplh",
+    "action": "Section Published",
+    "section": "amenities",
+    "details": "Updated section amenities",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.346Z"
+  },
+  {
+    "_id": "act_1793522626345m0ao",
+    "action": "Section Published",
+    "section": "residences",
+    "details": "Updated section residences",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.345Z"
+  },
+  {
+    "_id": "act_17935226263442ezh",
+    "action": "Section Published",
+    "section": "project",
+    "details": "Updated section project",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.344Z"
+  },
+  {
+    "_id": "act_1793522626344ga16",
+    "action": "Section Published",
+    "section": "navigation",
+    "details": "Updated section navigation",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.344Z"
+  },
+  {
+    "_id": "act_1793522626343795s",
+    "action": "Section Published",
+    "section": "highlights",
+    "details": "Updated section highlights",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.343Z"
+  },
+  {
+    "_id": "act_17935226263430kqy",
+    "action": "Section Published",
+    "section": "hero",
+    "details": "Updated section hero",
+    "user": "System",
+    "ip": "127.0.0.1",
+    "timestamp": "2026-11-01T08:43:46.343Z"
+  }
+]

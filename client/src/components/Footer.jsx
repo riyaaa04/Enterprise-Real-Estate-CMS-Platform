@@ -26,7 +26,7 @@ export default function Footer({ onAdminClick, onOpenEnquiry, onOpenBrochure, on
     <footer id="contact" className="relative text-neutral-300 font-sans select-none overflow-hidden">
       
       {/* ================= PRE-FOOTER SUNSET SKYLINE CTA BANNER ================= */}
-      <div className="relative min-h-[420px] sm:min-h-[480px] flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-[290px] sm:min-h-[340px] flex items-center justify-center overflow-hidden">
         
         {/* Sunset Skyline Background Image - Positioned slightly lower to show sunset and skyline */}
         <img
@@ -38,31 +38,31 @@ export default function Footer({ onAdminClick, onOpenEnquiry, onOpenBrochure, on
         {/* Balanced luxury overlay to gently tone down brightness */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#14100B] via-black/45 to-black/45" />
 
-        {/* Banner Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center flex flex-col items-center">
+        {/* Banner Content (Compact Length & Proportion) */}
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center flex flex-col items-center">
           
           {/* Eyebrow */}
-          <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-[#F6EFCF] uppercase mb-4 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          <span className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#F6EFCF] uppercase mb-2.5 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             READY TO CALL IT HOME?
           </span>
 
           {/* Heading */}
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-8 drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight mb-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             Your Next Chapter Begins in Chembur
           </h2>
 
           {/* Dual Action Buttons with Luxury Gold Theme */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
             <button
               onClick={handleSiteVisit}
-              className="w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl bg-gradient-to-r from-[#F6EFCF] via-[#D4AF37] to-[#B8860B] text-neutral-950 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.4)] hover:shadow-gold-glow-lg hover:scale-105 cursor-pointer"
+              className="w-full sm:w-auto px-7 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-[#F6EFCF] via-[#D4AF37] to-[#B8860B] text-neutral-950 font-bold uppercase tracking-wider text-xs sm:text-[13px] transition-all duration-300 shadow-[0_8px_25px_rgba(212,175,55,0.35)] hover:shadow-gold-glow-lg hover:scale-105 cursor-pointer"
             >
               SCHEDULE A SITE VISIT
             </button>
 
             <button
               onClick={handleBrochure}
-              className="w-full sm:w-auto px-8 sm:px-10 py-4 rounded-xl bg-black/45 hover:bg-black/75 text-[#F6EFCF] hover:text-white border border-gold-400/80 hover:border-gold-300 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 shadow-2xl backdrop-blur-md hover:scale-105 cursor-pointer"
+              className="w-full sm:w-auto px-7 sm:px-8 py-3 rounded-xl bg-black/45 hover:bg-black/75 text-[#F6EFCF] hover:text-white border border-gold-400/80 hover:border-gold-300 font-bold uppercase tracking-wider text-xs sm:text-[13px] transition-all duration-300 shadow-xl backdrop-blur-md hover:scale-105 cursor-pointer"
             >
               DOWNLOAD BROCHURE
             </button>

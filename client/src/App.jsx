@@ -47,10 +47,26 @@ export default function App() {
     }
   };
 
+  const checkRoute = () => {
+    const token = localStorage.getItem('codename_token');
+    const path = window.location.pathname;
+    const hash = window.location.hash;
+
+    if (path.startsWith('/admin') || hash === '#admin') {
+      if (token) {
+        setViewMode('admin-dashboard');
+      } else {
+        setViewMode('admin-login');
+      }
+    } else {
+      setViewMode('landing');
+    }
+  };
+
   useEffect(() => {
     fetchCmsContent();
 
-    // Check if token exists
+    // Check if user session exists
     const token = localStorage.getItem('codename_token');
     const storedUser = localStorage.getItem('codename_user');
     if (token && storedUser) {
@@ -59,14 +75,15 @@ export default function App() {
       } catch (e) {}
     }
 
-    // Check URL hash / path for admin
-    if (window.location.pathname.startsWith('/admin') || window.location.hash === '#admin') {
-      if (token) {
-        setViewMode('admin-dashboard');
-      } else {
-        setViewMode('admin-login');
-      }
-    }
+    // Initial route check (/ vs /admin)
+    checkRoute();
+
+    // Handle browser back and forward button clicks
+    const handlePopState = () => {
+      checkRoute();
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const handleOpenEnquiry = (source = 'Hero CTA') => {
@@ -82,25 +99,33 @@ export default function App() {
     setBrochureOpen(true);
   };
 
+  const navigateTo = (mode, urlPath) => {
+    setViewMode(mode);
+    if (typeof window !== 'undefined' && window.location.pathname !== urlPath) {
+      window.history.pushState({ mode }, '', urlPath);
+    }
+  };
+
   const handleAdminClick = () => {
     const token = localStorage.getItem('codename_token');
-    if (token) {
-      setViewMode('admin-dashboard');
-    } else {
-      setViewMode('admin-login');
-    }
+    const targetMode = token ? 'admin-dashboard' : 'admin-login';
+    navigateTo(targetMode, '/admin');
+  };
+
+  const handleBackToLiveSite = () => {
+    navigateTo('landing', '/');
   };
 
   const handleLoginSuccess = (user, token) => {
     setCurrentUser(user);
-    setViewMode('admin-dashboard');
+    navigateTo('admin-dashboard', '/admin');
   };
 
   const handleLogout = () => {
     localStorage.removeItem('codename_token');
     localStorage.removeItem('codename_user');
     setCurrentUser(null);
-    setViewMode('landing');
+    navigateTo('landing', '/');
   };
 
   // If in Admin Login View
@@ -108,7 +133,7 @@ export default function App() {
     return (
       <AdminLogin
         onLoginSuccess={handleLoginSuccess}
-        onBackToSite={() => setViewMode('landing')}
+        onBackToSite={handleBackToLiveSite}
       />
     );
   }
@@ -119,7 +144,7 @@ export default function App() {
       <AdminDashboard
         user={currentUser}
         onLogout={handleLogout}
-        onViewLiveSite={() => setViewMode('landing')}
+        onViewLiveSite={handleBackToLiveSite}
         onContentUpdated={fetchCmsContent}
       />
     );

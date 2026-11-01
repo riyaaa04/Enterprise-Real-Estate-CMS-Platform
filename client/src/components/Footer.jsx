@@ -210,12 +210,17 @@ export default function Footer({ onAdminClick, onOpenEnquiry, onOpenBrochure, on
             <span>•</span>
             <span>MahaRERA Registration No: P51800049182</span>
             <span>•</span>
-            <button
-              onClick={onAdminClick}
+            <a
+              href="/admin"
+              onClick={(e) => {
+                e.preventDefault();
+                onAdminClick && onAdminClick();
+              }}
               className="text-gold-400/80 hover:text-gold-300 font-medium transition-colors cursor-pointer"
+              title="Open CMS Admin Portal (/admin)"
             >
               CMS Admin
-            </button>
+            </a>
           </div>
         </div>
       </div>

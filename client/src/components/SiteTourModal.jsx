@@ -35,8 +35,6 @@ export default function SiteTourModal({ isOpen, onClose }) {
       message: `Requested exclusive site tour on ${formData.date} at ${formData.timeSlot}. Chauffeur pickup: ${formData.needChauffeur ? 'Yes' : 'No'}.`,
     };
 
-    saveLocalInquiry(payload);
-
     try {
       await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
@@ -46,6 +44,7 @@ export default function SiteTourModal({ isOpen, onClose }) {
       setSubmitted(true);
     } catch (err) {
       console.warn('Network issue saving tour booking to server, preserved locally:', err);
+      saveLocalInquiry(payload);
       setSubmitted(true);
     } finally {
       setLoading(false);

@@ -41,9 +41,6 @@ export default function InquiryModal({ isOpen, onClose, defaultSource = 'Hero CT
       source: defaultSource,
     };
 
-    // 1. Immediately persist to local storage backup (zero lost leads)
-    saveLocalInquiry(payload);
-
     try {
       const res = await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
@@ -54,11 +51,12 @@ export default function InquiryModal({ isOpen, onClose, defaultSource = 'Hero CT
       if (res.ok && data.success) {
         setSubmitted(true);
       } else {
-        // Still marked as submitted since lead is safely saved in local storage backup
+        saveLocalInquiry(payload);
         setSubmitted(true);
       }
     } catch (err) {
       console.warn('Network issue saving inquiry to server, preserved in local storage:', err);
+      saveLocalInquiry(payload);
       setSubmitted(true);
     } finally {
       setLoading(false);

@@ -16,6 +16,7 @@ try {
 }
 
 export let isConnectedToMongo = false;
+export let lastDbError = null;
 let cachedConnection = null;
 
 const DEFAULT_MONGO_URI = 'mongodb+srv://2023riyas_db_user:gAaB9jHCEUIuWk3c@cluster0.xoxxzbf.mongodb.net/codename_one?retryWrites=true&w=majority';
@@ -23,6 +24,7 @@ const DEFAULT_MONGO_URI = 'mongodb+srv://2023riyas_db_user:gAaB9jHCEUIuWk3c@clus
 export const connectDB = async () => {
   if (cachedConnection && mongoose.connection.readyState === 1) {
     isConnectedToMongo = true;
+    lastDbError = null;
     return cachedConnection;
   }
 
@@ -34,9 +36,11 @@ export const connectDB = async () => {
     });
     cachedConnection = conn;
     isConnectedToMongo = true;
+    lastDbError = null;
     console.log(`[Database] MongoDB Connected: ${conn.connection.host}`);
     return conn;
   } catch (error) {
+    lastDbError = error.message;
     console.warn(`[Database] MongoDB connection note (${error.message}). Running with resilient high-availability store.`);
     isConnectedToMongo = false;
     return null;

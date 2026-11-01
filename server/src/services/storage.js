@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import mongoose from 'mongoose';
-import { isConnectedToMongo } from '../config/db.js';
+import { isConnectedToMongo, connectDB } from '../config/db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -302,7 +302,13 @@ export const StorageService = {
       createdAt: new Date()
     };
 
-    if (isConnectedToMongo && mongoose.connection.readyState === 1) {
+    if (mongoose.connection.readyState !== 1) {
+      try {
+        await connectDB();
+      } catch (e) {}
+    }
+
+    if (mongoose.connection.readyState === 1) {
       try {
         const doc = new InquiryModel(inquiryData);
         await doc.save();
@@ -325,7 +331,13 @@ export const StorageService = {
   },
 
   async getInquiries({ search = '', status = '', page = 1, limit = 50 } = {}) {
-    if (isConnectedToMongo && mongoose.connection.readyState === 1) {
+    if (mongoose.connection.readyState !== 1) {
+      try {
+        await connectDB();
+      } catch (e) {}
+    }
+
+    if (mongoose.connection.readyState === 1) {
       try {
         const query = {};
         if (status && status !== 'all') query.status = status;
@@ -366,7 +378,13 @@ export const StorageService = {
   },
 
   async updateInquiryStatus(id, status, user = 'admin') {
-    if (isConnectedToMongo && mongoose.connection.readyState === 1) {
+    if (mongoose.connection.readyState !== 1) {
+      try {
+        await connectDB();
+      } catch (e) {}
+    }
+
+    if (mongoose.connection.readyState === 1) {
       try {
         const doc = await InquiryModel.findByIdAndUpdate(id, { status }, { new: true });
         if (doc) {
@@ -387,7 +405,13 @@ export const StorageService = {
   },
 
   async deleteInquiry(id, user = 'admin') {
-    if (isConnectedToMongo && mongoose.connection.readyState === 1) {
+    if (mongoose.connection.readyState !== 1) {
+      try {
+        await connectDB();
+      } catch (e) {}
+    }
+
+    if (mongoose.connection.readyState === 1) {
       try {
         const res = await InquiryModel.findByIdAndDelete(id);
         if (res) {

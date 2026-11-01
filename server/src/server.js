@@ -3,7 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
+import { connectDB, isConnectedToMongo, lastDbError } from './config/db.js';
+import mongoose from 'mongoose';
 import { seedInitialData } from './seeds/seed.js';
 
 import authRoutes from './routes/auth.routes.js';
@@ -49,11 +50,23 @@ app.use('/api/seo', seoRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
+  const readyStates = ['disconnected', 'connected', 'connecting', 'disconnecting'];
+  const rawUri = process.env.MONGO_URI || process.env.MONGODB_URI || 'DEFAULT_ATLAS_URI';
+  const maskedUri = rawUri.replace(/:([^@]+)@/, ':****@');
   res.json({
     status: 'ok',
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
-    service: 'Codename ONE Real Estate CMS API'
+    service: 'Codename ONE Real Estate CMS API',
+    mongo: {
+      connected: isConnectedToMongo,
+      readyState: mongoose.connection.readyState,
+      status: readyStates[mongoose.connection.readyState] || 'unknown',
+      host: mongoose.connection.host || null,
+      dbName: mongoose.connection.name || null,
+      uriUsed: maskedUri,
+      lastError: lastDbError
+    }
   });
 });
 

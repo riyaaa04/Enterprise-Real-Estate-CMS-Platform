@@ -22,8 +22,6 @@ export default function BrochureModal({ isOpen, onClose }) {
       message: 'Downloaded digital project brochure dossier.',
     };
 
-    saveLocalInquiry(payload);
-
     try {
       await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
@@ -33,6 +31,7 @@ export default function BrochureModal({ isOpen, onClose }) {
       setDownloaded(true);
     } catch (err) {
       console.warn('Network issue saving brochure inquiry to server, preserved locally:', err);
+      saveLocalInquiry(payload);
       setDownloaded(true);
     } finally {
       setLoading(false);

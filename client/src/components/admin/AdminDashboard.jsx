@@ -73,6 +73,7 @@ export default function AdminDashboard({ user, onLogout, onViewLiveSite, onConte
     setInquiriesLoading(true);
     try {
       const token = localStorage.getItem('codename_token') || 'demo-jwt-token-local';
+      let serverFetched = false;
       let serverItems = [];
 
       try {
@@ -82,44 +83,37 @@ export default function AdminDashboard({ user, onLogout, onViewLiveSite, onConte
         const data = await res.json();
         if (data.success && Array.isArray(data.items)) {
           serverItems = data.items;
+          serverFetched = true;
         }
       } catch (networkErr) {
         console.warn('Backend inquiries fetch error, using local fallback:', networkErr);
       }
 
-      const localItems = getLocalInquiries();
-
-      // Filter local items if search or status filter active
-      let filteredLocal = localItems;
-      if (inquiryStatusFilter && inquiryStatusFilter !== 'all') {
-        filteredLocal = filteredLocal.filter(i => (i.status || 'new') === inquiryStatusFilter);
-      }
-      if (inquirySearch) {
-        const q = inquirySearch.toLowerCase();
-        filteredLocal = filteredLocal.filter(i =>
-          (i.name && i.name.toLowerCase().includes(q)) ||
-          (i.email && i.email.toLowerCase().includes(q)) ||
-          (i.phone && i.phone.includes(q))
-        );
-      }
-
-      // Merge and deduplicate
-      const seen = new Set();
-      const merged = [];
-
-      // Local leads first so fresh submissions appear immediately on top
-      for (const item of [...filteredLocal, ...serverItems]) {
-        const uniqueKey = item._id || `${item.phone}_${item.name}`;
-        if (!seen.has(uniqueKey)) {
-          seen.add(uniqueKey);
-          merged.push(item);
+      if (serverFetched) {
+        // When server is healthy, server database (MongoDB) is the single source of truth
+        setInquiries(serverItems);
+        // Wipe old local browser cache so deletions in MongoDB Compass reflect instantly
+        localStorage.removeItem('codename_captured_inquiries');
+      } else {
+        // Only fallback to local browser cache if server was unreachable
+        const localItems = getLocalInquiries();
+        let filteredLocal = localItems;
+        if (inquiryStatusFilter && inquiryStatusFilter !== 'all') {
+          filteredLocal = filteredLocal.filter(i => (i.status || 'new') === inquiryStatusFilter);
         }
+        if (inquirySearch) {
+          const q = inquirySearch.toLowerCase();
+          filteredLocal = filteredLocal.filter(i =>
+            (i.name && i.name.toLowerCase().includes(q)) ||
+            (i.email && i.email.toLowerCase().includes(q)) ||
+            (i.phone && i.phone.includes(q))
+          );
+        }
+        setInquiries(filteredLocal);
       }
-
-      setInquiries(merged);
     } catch (err) {
       console.error('Error in inquiries handler:', err);
-      setInquiries(getLocalInquiries());
+      setInquiries([]);
     } finally {
       setInquiriesLoading(false);
     }
